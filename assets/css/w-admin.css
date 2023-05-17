@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'gilroy';
+    src: url('../../assets/fonts/SVN-GilroyMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+#adminmenu li.wp-menu-separator {display: none;}
+.w_frame {
+    height: 90vh;
+    padding-right: 20px;
+}
+.w_frame iframe {
+    width: 100%;
+    height: 100%;
+}
+.w_title {
+    display: flex;
+    align-items: flex-end;
+    padding: 1em 0;
+}
+.w_title h1 {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.login h1 a {
+    background-image: url(../../assets/images/weable.webp);
+    background-size: contain;
+    background-position: center;
+    width: 120px;
+    height: 120px;
+}
+
+body {background: #f0f2f5; font-family: 'gilroy',sans-serif;}
+.login form {
+    border: none;
+    box-shadow: none;
+}
+.login #backtoblog, .login #nav, .language-switcher {
+    display: none;
+}
+
+#yoast-first-time-configuration-notice {display: none!important;}

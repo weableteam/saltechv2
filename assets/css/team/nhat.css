@@ -1,0 +1,986 @@
+/*Start .w-intro */
+.w-intro {
+    padding-top: 82px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh + 77rem);
+}
+
+.w-intro .title {
+    margin-bottom: 5rem;
+    margin-right: 7rem;
+}
+
+.w-intro .title .sub-title {
+    color: white;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 1rem;
+    padding-top: 6rem;
+    width: 89%;
+}
+
+.w-intro .title .sub-title .img-text {
+    position: absolute;
+    right: -2rem;
+    top: -0.5rem;
+    z-index: -1;
+    opacity: 0.5;
+    width: 90px;
+    height: 63px;
+}
+
+.w-intro .title span {
+    color: white;
+    line-height: 1.9rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.w-intro .title span .img-ellipse {
+    position: absolute;
+    left: -6rem;
+    top: 7rem;
+    z-index: -1;
+    /* transform: translateY(-50%); */
+    width: 198px;
+    height: 99px;
+    opacity: 0.3;
+}
+
+.w-intro .title h1 {
+    color: #26FFB1;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 5.2rem;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.w-intro .title h1 .img-plane {
+    position: absolute;
+    right: 7rem;
+    top: -2rem;
+    width: 52px;
+    height: 56px;
+}
+
+.w-intro img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.w-intro .register label {
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+.w-intro .register .input-group{
+    position: relative;
+    background: rgba(255, 255, 255, 0.33);
+    border-radius: 15px;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition: all .3s ease-in-out;
+}
+.w-intro .register button,
+.w-intro .register input,
+.w-intro .register .input-group-text{
+    background: transparent;
+    color: #FFFFFF;
+    border: rgba(255, 255, 255, 0.33);
+    margin: .4rem 0;
+}
+.w-intro .register .input-group-text{
+    border-right:  0.5px solid #0F4865 ;
+    font-size: 1.2rem;
+}
+.w-intro .register button:focus,
+.w-intro .register input:focus{
+    box-shadow: unset;
+}
+.w-intro .register input{
+    cursor: pointer;
+}
+.w-intro .register button{
+    font-size: 1.5rem;
+    padding: 0.375rem 0.95rem;
+    margin: 0;
+    border-radius: 15px;
+    transition: all .3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+.w-intro .register button:hover{
+    border: 1px solid #FFFFFF;
+    color: #26FFB1;
+    background: rgba(255, 255, 255, 0.66);
+}
+.w-intro .register button i{
+    display: block;
+    transform: translate(0px, 0px);
+    transition: all .3s;
+}
+.w-intro .register button:hover i{
+    transform: translate(5px, -5px);
+}
+.w-intro .register .input-group:hover{
+    background: rgba(255, 255, 255, 0.66);
+    border: 1px solid #26FFB1;
+}
+.w-intro .register .input-group:hover .input-group-text{
+    color: #26FFB1;
+    border-right: 0.5px solid #26FFB1;
+}
+.w-intro .register .input-group label{
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 0.85rem;
+    top: 50%;
+    left: 3.5rem;
+    transform: translateY(-50%);
+    cursor: text;
+    margin: 0;
+    user-select: none;
+    pointer-events: none;
+    transition: .3s ease;
+}
+.w-intro .register .input-group input:not(:placeholder-shown)  + label,
+.w-intro .register .input-group input:focus + label{
+    top: 15%;
+    font-size: .5rem;
+    color: #14313A;
+    display: inline-block;
+}
+.w-intro .register .input-group:hover label{
+    color: #14313A;
+}
+/*  */
+.w-intro .page-redirect-link {
+    margin-top: 6.125rem;
+}
+
+.w-intro .page-redirect-link svg {
+    margin-right: 4rem;
+}
+
+.w-intro .page-redirect-link .link-lists {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-auto-flow: row dense;
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.w-intro .page-redirect-link .link-lists li {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 2rem;
+    transition: all .3s ease-in;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.w-intro .page-redirect-link .link-lists li.active {
+    background-color: #26FFB180;
+}
+
+.w-intro .page-redirect-link .link-lists li:hover {
+    background-color: #26FFB1;
+    color: #FFFFFF;
+}
+
+.w-intro .page-redirect-link .link-lists li a {
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+}
+
+.w-intro .img-content {
+    position: relative;
+    width: 38.5vw;
+    height: 38vw;
+}
+
+.w-intro .img-content::after {
+    position: absolute;
+    content: '';
+    background-image: url("../../images/hoạ\ \ tiết\ \ 1\ THH.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: -6rem;
+    top: 3rem;
+    width: 20rem;
+    height: 20rem;
+    z-index: -1;
+}
+
+.w-intro .img-content::before {
+    position: absolute;
+    content: '';
+    background-image: url("../../images/Hoạ\ \ tiết\ \ 2\ THH.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: -15rem;
+    top: 5rem;  
+    width: 32rem;
+    height: 32rem;
+    z-index: 1;
+}
+
+.w-intro .brand {
+    margin: 3.75rem 0;
+    background: linear-gradient(180deg, #26FFB1 0%, rgba(38, 255, 177, 0.2) -0.67%, rgba(38, 255, 177, 0) 46.81%);
+    border-radius: 15px 15px 0px 0px;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+/* scroll */
+.w-intro .brand .brand-scroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 10px;
+  } 
+
+.w-intro .brand .logo-brand-list .img-logo {
+    display: inline-block;
+    width: 200px;
+    height: 90px;
+    margin-right: 10px;
+}
+
+.w-intro .brand .brand-scroll::-webkit-scrollbar {
+    width: 0;
+}
+
+/* scroll */
+
+.w-intro .brand .brand-title {
+    font-size: 1.5rem;
+    color: #B6DCE0;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+.w-intro .brand .logo-brand-list {
+    margin: 2.5rem 0;
+    margin-left: 4rem;
+    display: grid;
+    grid-auto-flow: column dense;
+    grid-auto-columns: 20%;
+    gap: 2rem;
+    text-align: center;
+    cursor: grab;   
+}
+
+.w-intro .brand .logo-brand-list .img-logo {
+    opacity: .6;
+}
+
+.w-intro .brand .logo-brand-list .img-logo img {
+    object-fit: cover;
+    height: auto;
+    width: unset ;
+}
+
+.w-intro .input-group.input-telephone:hover i {
+    color: #26FFB1;
+}
+
+.w-intro .brand .logo-brand-list  {
+	animation: animation-text 12s infinite;
+	overflow: unset;
+}
+
+
+@keyframes animation-text {
+	0% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(-35%);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes animation-text-mb {
+	0% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+
+/*End .w-intro */
+
+/* ********************************* */
+/*Start Contact .w-contact */
+.w-contact .contact {
+    padding: 0 3rem;
+    background: linear-gradient(180deg, #F4FFFB 0%, #D7FFF0 100%);
+    border: 1px solid rgba(20, 49, 58, 0.5);
+    border-radius: 30px;
+}
+
+.w-contact .title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.6rem;
+    color: #064666;
+    margin-bottom: 1rem;
+}
+
+.w-contact .input-group {
+    color: #14313A;
+    padding: .5rem;
+    border: none;
+    background: rgba(6, 70, 102, 0.15);
+    border-radius: 15px;
+    border: 1px solid #064666;
+    height: 48px;
+    transition: all .3s;
+    position: relative;
+}
+
+.w-contact .input-telephone {
+    border-color: transparent;
+
+}
+
+.w-contact .input-telephone:hover {
+    background: rgba(255, 255, 255, 0.356);
+    border-color: #26FFB1;
+    color: #14313A;
+
+}
+
+.w-contact .input-telephone:hover .phone-number {
+    color: #14313A;
+}
+
+.w-contact .input-group.input-telephone i {
+    transition: all .3s ease;
+    color: white;
+}
+
+.w-contact .input-group.input-telephone:hover i {
+    color: #26FFB1;
+}
+
+.w-contact .register .register-text {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.w-contact .form-input {
+    width: 100%;
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+}
+
+.w-contact .input-group-prepend {
+    padding: 0 .5rem;
+    border-right: 1px solid #064666;
+}
+
+.w-contact .icon-telephone {
+    border-right: 1px solid white;
+}
+
+.w-contact .input-group-prepend i {
+    font-size: 1.5rem;
+    color: #064666;
+}
+
+.w-contact .input-phone,
+.w-contact .form-input input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: #14313A;
+    padding-left: 1rem;
+}
+
+.w-contact .form-input label {
+    position: absolute;
+    bottom: -8px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    pointer-events: none;
+    margin: 0;
+}
+
+.w-contact .form-input label::before {
+    content: "Nhập domainn, tên miền phụ, URL";
+    position: absolute;
+    top: 0;
+    font-size: .7rem;
+    color: #064666;
+    left: 1rem;
+    transition: all 0.3s ease;
+}
+
+.w-contact .form-input label::after {
+    content: "MAC-Branding.com.vn";
+    position: absolute;
+    bottom: 15px;
+    font-size: 1rem;
+    color: #064666;
+    left: 1rem;
+    transition: all 0.3s ease;
+}
+
+.w-contact .content-name {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.w-contact .input-group .input-phone {
+    background: transparent !important;
+    outline: none;
+    box-shadow: none !important;
+}
+
+.w-contact .input-group .phone-number {
+    position: absolute;
+    left: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s ease-in-out;
+    margin: 0;
+    font-size: 1rem;
+    cursor: text;
+    user-select: none;
+    pointer-events: none;
+    color: white;
+}
+
+.w-contact .input-phone:not(:placeholder-shown)+label,
+.w-contact .input-phone:focus+label {
+    top: 20% !important;
+    font-size: .7rem;
+    color: #14313A;
+    display: inline-block;
+}
+
+.w-contact .form-input input:focus {
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+}
+
+.w-contact .form-input input:focus+.label-name .content-name,
+.w-contact .form-input input:valid+.label-name .content-name {
+    transform: translateY(-100%);
+    font-size: 14px;
+    left: 0px;
+    color: #fce38a;
+}
+
+.w-contact .form-input input:focus+.label-name::after,
+.w-contact .form-input input:valid+.label-name::after {
+    display: none;
+}
+
+.w-contact .form-register .input-group-prepend .icon-globe {
+    color: #064666;
+}
+
+.w-contact .form-register .submit {
+    margin-left: 1rem;
+    border: none;
+    width: 58px;
+    height: 58px;
+    border-radius: 10px;
+    position: relative;
+    background: rgba(6, 70, 102, 0.15);
+}
+
+.w-contact .form-register .submit:hover {
+    background: rgba(6, 70, 102, 0.062);
+    border: 1px solid rgba(255, 255, 255, 0.521);
+}
+
+.w-contact .form-register .submit i {
+    color: #CA29D8;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease-in;
+}
+
+.w-contact .form-register .submit:hover i {
+    transform: translate(-30%, -60%);
+    color: #26FFB1;
+}
+
+.w-contact .img-content {
+    width: 100%;
+    margin-top: -5rem;
+    height: 15.6rem;
+}
+
+/* End Contact .w-contact */
+
+/* ********************************************** */
+/* Start .w-process */
+.w-process {
+    background-image: url('https://saltech.webmau.net/wp-content/uploads/2023/03/image-1.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   min-height: 80vh;
+}
+
+.w-process .heading span {
+    font-size: 1.125rem;
+    line-height: 1.3rem;
+    color: #00C5B9D9;
+    font-weight: 500;
+}
+
+.w-process .heading h3 {
+    color: #FFFFFF;
+    font-size: 2rem;
+    line-height: 4.6rem;
+}
+
+.w-process .heading p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    display: inline-block;
+    width: 38%;
+    color: #B6DCE0;
+}
+
+.w-process .item-container {
+    overflow-x: scroll;
+    position: relative;
+    padding-left: 13rem;
+}
+
+.w-process .item-container::before {
+    position: absolute;
+    content: '';
+    background-image: url(../../images/Group\ 687\ \(1\).webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 9rem;
+    height: 4rem;
+    left: 2rem;
+    top: 0.5rem;
+}
+
+.w-process .item-container::-webkit-scrollbar {
+    display: none;
+}
+
+.w-process .item-container .items {
+    display: flex;
+    flex-wrap: nowrap;
+    width: fit-content;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.w-process .item-container .items img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.w-process .item-container .item {
+    width: 12rem;
+    margin-right: 6rem;
+}
+
+.w-process .item-container .item .item-title span,
+.w-process .item-container .item .item-title svg path,
+.w-process .item-container .item .item-title .text-contet P,
+.w-process .item-container .item .heading>span {
+    transition: all .3s ease-in;
+}
+
+.w-process .item-container .item:hover .heading>span {
+    background-color: #26FFB1;
+    color: #000;
+}
+
+.w-process .item-container .item:hover .item-title svg path {
+    fill: #26FFB1;
+}
+
+.w-process .item-container .item:hover .item-title span {
+    color: #26FFB1;
+}
+
+.w-process .item-container .item:hover .item-title .text-contet P {
+    display: block;
+}
+
+.w-process .item-container .item .heading>span {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #064666;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+}
+
+.w-process .item-container .item .heading {
+    position: relative;
+}
+
+.w-process .item-container .item .heading svg {
+    position: absolute;
+    content: '';
+    right: 13.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.w-process .item-container .item .item-title svg {
+    width: 50px;
+    height: 50px;
+}
+
+.w-process .item-container .item .item-title>span {
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    line-height: 1.4rem;
+    color: #B6DCE0;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.w-process .item-container .item .item-title .text-contet {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: #B6DCE0;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+.w-process .item-container .item .item-title .text-contet P {
+    display: none;
+    color: #B6DCE0;
+}
+
+/* End .w-process */
+
+/* PC */
+@media (min-width: 1500px) {
+    .w-intro {
+        /* height: calc(100vh + 64rem); */
+    }
+}
+
+/* Mobile - Tablet */
+@media (max-width: 1023px) {
+
+    /* Start introduction */
+    .w-intro .img-content {
+        display: none;
+    }
+
+    .form-register {
+        align-items: center;
+    }
+
+    .w-intro .input-group {
+        margin-bottom: 1rem;
+    }
+
+    .w-intro .form-input input:focus+.label-name::before,
+    .w-intro .form-input input:valid+.label-name::before {
+        display: none;
+    }
+
+    .w-contact .form-register {
+        flex-direction: column;
+    }
+
+    .w-contact .form-register .submit {
+        width: 10rem;
+    }
+
+    /* End introduction */
+
+    /* *************************** */
+    /* Start contact - w-contact.php */
+    .w-contact .img-content {
+        display: none;
+    }
+
+    .w-contact .contact {
+        padding: 1rem;
+    }
+
+    .w-contact .title {
+        text-align: center;
+    }
+
+    /* End contact - w-contact.php */
+
+    /* Start .w-process */
+    .w-process .item-container .item .item-title .text-contet P {
+        display: block;
+        padding-right: 2rem;
+    }
+
+    /* End .w-process */
+}
+
+/* Tablet */
+@media (min-width:740px) and (max-width: 1023px) {
+
+    /* Start introduction */
+    .w-intro {
+        height: calc(100vh + 48rem);
+    }
+
+    .w-intro .title {
+        margin-bottom: 3rem;
+        margin-right: 0rem;
+    }
+
+    .w-intro .page-redirect-link {
+        margin-top: 3.125rem;
+    }
+
+    /* End introduction */
+
+    /* *************************** */
+    /* Start contact - w-contact.php */
+    .w-contact .input-group {
+        margin-bottom: 1rem;
+    }
+
+    .w-contact .title {
+        font-size: 1.75rem;
+    }
+
+    /* End contact - w-contact.php */
+
+    /* Start .w-process */
+    .w-process .heading p {
+        width: 80%;
+    }
+
+    .w-process .item-container {
+        width: 100vw;
+    }
+
+    /* End .w-process */
+
+}
+
+/* Mobile */
+@media (max-width:991px) {
+
+    /* Start introduction */
+    .w-intro {
+        height: calc(100vh + 59rem);
+    }
+    .w-intro .title .sub-title {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        width: 100%;
+    }
+    .w-intro .brand .logo-brand-list  {
+        animation: animation-text-mb 12s infinite;
+        overflow: unset;
+    }
+    
+    .w-intro .register button {
+        width: 100%;
+    }
+    .w-intro .title span {
+        line-height: 1.5rem;
+        font-size: 1rem;
+        margin:0;
+        display: inline-block;
+    }
+
+    .w-intro .title h1 {
+        line-height: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .w-intro .title h1 .img-plane {
+        right: -0.5rem;
+        top: -1.5rem;
+        width: 40px;
+        height: 40px;
+        z-index: -1;
+    }
+
+    .w-intro .title {
+        margin-bottom: 2rem;
+        margin-right: 0rem;
+    }
+
+    .w-intro .page-redirect-link .link-lists {
+        gap: 1rem;
+    }
+
+    .w-intro .page-redirect-link .link-lists li a {
+        color: white;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+    }
+
+    .w-intro .page-redirect-link {
+        margin-top: 1rem;
+    }
+
+    .w-intro .brand {
+        padding: 1rem;
+    }
+
+    .w-intro .page-redirect-link svg {
+        margin-right: 1rem;
+    }
+
+    .w-intro .brand .brand-title {
+        font-size: 0.85rem;
+    }
+
+    .w-intro .brand .logo-brand-list {
+        margin: 1rem 0;
+        margin-left: 2rem;
+    }
+
+    .w-intro .brand .logo-brand-list .img-logo {
+        width: 4rem;
+        height: 2rem;
+    }
+
+    .w-intro .brand {
+        padding: .5rem;
+    }
+
+    /* End introduction */
+
+    /* *************************************** */
+    /* Start contact - w-contact.php */
+
+    .w-contact .title {
+        font-size: 1.25rem;
+        line-height: 1.6rem;
+    }
+
+    .w-contact .input-group {
+        height: 44px;
+        margin-bottom: 1rem;
+    }
+
+    .w-contact .form-input label::before {
+        font-size: .5rem;
+        top: 4px;
+    }
+
+    .w-contact .form-input label::after {
+        font-size: .8rem;
+        bottom: 20px;
+    }
+
+    .w-contact .form-register .submit {
+        width: 6rem;
+        height: 46px;
+    }
+
+    /* End contact - w-contact.php */
+    /*Start .w-process . */
+    .w-process .heading p {
+        width: 100%;
+        padding: 0 .5rem;
+    }
+
+    .w-process .heading span {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .w-process .heading h3 {
+        font-size: 1.7rem;
+        line-height: 2.6rem;
+    }
+
+    .w-process .item-container {
+        width: 88.5vw;
+        padding-left: 10.5rem;
+    }
+
+    .w-process .item-container::before {
+        width: 7rem;
+        height: 4rem;
+        top: 0;
+    }
+
+    .w-process .item-container .item .heading>span {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .w-process .item-container .item .item-title svg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .w-process .item-container .item .item-title>span {
+        font-size: 1rem;
+    }
+
+    .w-process .item-container .item .heading svg {
+        width: 7rem;
+    }
+
+    .w-process .item-container .item {
+        width: 12.8rem;
+        margin-right: 0rem;
+    }
+
+    /*End .w-process . */
+}
