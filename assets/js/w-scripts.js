@@ -21,6 +21,7 @@ appHeight();
  * jQuery
  *
  */
+
 (function ($) {
   $(document).ready(function () {
     sal({
@@ -28,6 +29,43 @@ appHeight();
     });
   });
 
+  $(document).ready(function () {
+    $(".w-apj .about-slider").slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: true,
+      draggable: true,
+      prevArrow: `<button type='button' class='slick-prev slick-arrow'><i class="bi bi-chevron-left"></i></button>`,
+      nextArrow: `<button type='button' class='slick-next slick-arrow'><i class="bi bi-chevron-right"></i></button>`,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            arrows: false,
+            infinite: false,
+          },
+        },
+      ],
+      // autoplay: true,
+      // autoplaySpeed: 1000,
+    });
+  });
+  $(".w-apj .about-slider").on(
+    "afterChange",
+    function (event, slick, currentSlide) {
+      var counter = $(this).closest(".w-apj").find(".about-slider--counter");
+      counter.text(currentSlide + 1 + "/" + slick.slideCount);
+    }
+  );
   $("#hamburger-menu").click(function () {
     $(this).toggleClass("active");
     $(".m-menu").toggleClass("show");
@@ -98,12 +136,14 @@ appHeight();
     slidesToScroll: 1,
   });
 
-  
   // backtop
   $(".toTop").click(() => {
-    $("html, body").animate({
-      scrollTop: $("html, body").offset().top,
-    },3000);
+    $("html, body").animate(
+      {
+        scrollTop: $("html, body").offset().top,
+      },
+      3000
+    );
   });
   $(".toTop").fadeOut();
 
@@ -114,28 +154,34 @@ appHeight();
       $(".toTop").fadeOut();
     }
   });
-  $(window).on("load", function() {
-    var marginLeft = $('.w-timeline .container').css('margin-left');
-    $('.w-timeline .slick-list').css('margin-left',`calc(${marginLeft} + 15px)`)
+  $(window).on("load", function () {
+    var marginLeft = $(".w-timeline .container").css("margin-left");
+    $(".w-timeline .slick-list").css(
+      "margin-left",
+      `calc(${marginLeft} + 15px)`
+    );
 
-    window.addEventListener('resize', function() {
-    var marginLeft = $('.w-timeline .container').css('margin-left');
+    window.addEventListener("resize", function () {
+      var marginLeft = $(".w-timeline .container").css("margin-left");
 
-      $('.w-timeline .slick-list').css('margin-left',`calc(${marginLeft} + 15px)`)
-  
+      $(".w-timeline .slick-list").css(
+        "margin-left",
+        `calc(${marginLeft} + 15px)`
+      );
     });
 
-    var marginLeft = $('.w-member .container').css('margin-left');
-    $('.w-member .slick-list').css('margin-left',`calc(${marginLeft} + 15px)`)
+    var marginLeft = $(".w-member .container").css("margin-left");
+    $(".w-member .slick-list").css("margin-left", `calc(${marginLeft} + 15px)`);
 
-    window.addEventListener('resize', function() {
-    var marginLeft = $('.w-member .container').css('margin-left');
+    window.addEventListener("resize", function () {
+      var marginLeft = $(".w-member .container").css("margin-left");
 
-      $('.w-member .slick-list').css('margin-left',`calc(${marginLeft} + 15px)`)
-  
+      $(".w-member .slick-list").css(
+        "margin-left",
+        `calc(${marginLeft} + 15px)`
+      );
     });
   });
-
 
   // $('.link-prj').on('click', function(e) {
   //   e.preventDefault();
@@ -157,5 +203,4 @@ appHeight();
   //   }
   //   });
   //   });
-    })(jQuery);
-
+})(jQuery);

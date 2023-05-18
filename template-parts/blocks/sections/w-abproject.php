@@ -31,17 +31,49 @@ if (!empty($block['align'])) {
 // Load values and assign defaults.
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-    <div class="text-center">About Projectt</div>
+    <div class="container">
+        <div class="about-container">
+            <div class="about-heading">
+                <h1>
+                    Title dẫn xem dự án. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Duis porta bibendum sem. In vitae mi gravida,
+                    tempus neque eu, interdum ri.
+                </h1>
+            </div>
+            <div class="about-slider">
+                <div class="about-item">
+                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Rectangle-215.webp" alt="" />
+                </div>
+                <div class="about-item">
+                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Rectangle-215.webp" alt="" />
+                </div>
+                <div class="about-item">
+                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Rectangle-215.webp" alt="" />
+                </div>
+                <div class="about-item">
+                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Rectangle-215.webp" alt="" />
+                </div>
+            </div>
+            <div class="about-name">
+                <span><img src="http://localhost:10041/wp-content/uploads/2023/05/Group-903.webp" alt=""></span>
+                <div class="about-name-wrapper">
+                    <h4>Tên dự án</h4>
+                    <p>Tên dịch vụ</p>
+                </div>
+            </div>
+            <div class="about-slider--counter">1/4</div>
+        </div>
+    </div>
 </section>
 <?php
 //add_action( 'wp_footer', 'apjScripts', 99, 1 );
 if (!function_exists('apjScripts')) {
     function apjScripts()
     { ?>
-        <script async>
-            (function($) {
+<script async>
+(function($) {
 
-            }(jQuery));
-        </script>
+}(jQuery));
+</script>
 <?php }
 }
