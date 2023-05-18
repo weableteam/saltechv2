@@ -100,9 +100,9 @@ if (!function_exists('memberScripts'))   {
         autoplaySpeed: 3000,
         dots: true,
         prevArrow:
-            '<button type="button" class="slick-prev " style="display:none"></button>',
+        '<button type="button" class="slick-prev "><img src="<?= get_stylesheet_directory_uri() . '/assets/images/leftDefault.svg' ?>" class="img-fluid" alt=""><img src="<?= get_stylesheet_directory_uri() . '/assets/images/left.svg' ?>" class="img-fluid d-none imgPrev" alt=""></button>',
         nextArrow:
-            '<button type="button" class="slick-next style="display:none""></button>',
+        '<button type="button" class="slick-next "><img src="<?= get_stylesheet_directory_uri() . '/assets/images/rightDefault.svg' ?>" class="img-fluid" alt=""><img src="<?= get_stylesheet_directory_uri() . '/assets/images/rightt.svg' ?>" class="img-fluid d-none imgNext" alt=""></button>',
 
             responsive: [
                     {

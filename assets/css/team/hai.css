@@ -4,7 +4,7 @@ img {
 
 /* w-tabService */
 .w-tabService {
-    margin-top: -47rem;
+    margin-top: -100vh;
 }
 
 .w-tabService::before {
@@ -171,6 +171,7 @@ img {
     margin: 1rem auto;
     font-size: 2rem;
     color: #14313A;
+    font-family: "Red",sans-serif;
 }
 
 .w-tabService .comment img {
@@ -412,6 +413,7 @@ img {
 /* w-pageHeaderv1 */
 .w-pageHeaderv1 {
     padding: 0 !important;
+    padding-top: 40px !important;
  
 }
 .w-pageHeaderv1 .bg-wrap{
@@ -719,6 +721,7 @@ img {
 
 .w-memberSlider .list-content .info {
     padding: 10rem 0;
+    padding-top: 5rem;
     width: 50%;
 }
 

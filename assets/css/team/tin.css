@@ -311,7 +311,6 @@
 .w-packageService .package-text p {
   font-size: 1.2rem;
   color: #00c5b9;
-  padding-top: 2rem;
 }
 
 .w-packageService .package-text h4 {
@@ -1101,7 +1100,7 @@
 }
 
 .w-diff .diff-main .diff-note {
-  width: 15%;
+  width: 30%;
   height: fit-content;
   margin: auto;
   padding-left: 3rem;
@@ -1114,7 +1113,6 @@
 
 /* test scroll */
 .w-diff .scroll {
-  width: 85%;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -1122,7 +1120,7 @@
 }
 
 .w-diff .scroll .item img {
-  width: 135%;
+  width: 110%;
 }
 
 .w-diff .item {
