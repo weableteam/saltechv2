@@ -11,19 +11,19 @@
 
 // Create id attribute allowing for custom "anchor" value.
 $id = 'w-block-' . $block['id'];
-if( !empty($block['anchor']) ) {
+if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
 $className = 'w-apj';
 
-if( !empty($block['className']) ) {
+if (!empty($block['className'])) {
     $className .= ' ' . $block['className'];
 }
 
 $isFullWidth = false;
-if( !empty($block['align']) ) {
+if (!empty($block['align'])) {
     $isFullWidth = $block['align'] === 'full' ? true : false;
     $className .= ' align-' . $block['align'];
 }
@@ -31,16 +31,17 @@ if( !empty($block['align']) ) {
 // Load values and assign defaults.
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-    <div class="text-center">About Project</div>
+    <div class="text-center">About Projectt</div>
 </section>
-<?php 
+<?php
 //add_action( 'wp_footer', 'apjScripts', 99, 1 );
-if (!function_exists('apjScripts'))   {
-    function apjScripts() { ?>
+if (!function_exists('apjScripts')) {
+    function apjScripts()
+    { ?>
         <script async>
-            ( function ( $ ) {
-                
-            }( jQuery ) );
+            (function($) {
+
+            }(jQuery));
         </script>
-    <?php }
+<?php }
 }
