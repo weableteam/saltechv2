@@ -586,6 +586,127 @@ function tpa_acf_init_block_types() {
             'align'             => 'full',
             'keywords'          => array( '[W-Section] Timeline', 'acf' ),
         ));
+
+        /** 
+         * [W-Section] Image Text
+         */
+        acf_register_block_type(array(
+            'name'              => 'imageText',
+            'title'             => __(' [W-Section] Image Text'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/w-imageText.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] Image Text', 'acf' ),
+        ));
+
+        /** 
+         * [W-Section] Missions
+         */
+        acf_register_block_type(array(
+            'name'              => 'missions',
+            'title'             => __(' [W-Section] Missions'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/w-missions.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] Missions', 'acf' ),
+        ));
+
+        /** 
+         * [W-Section] Stage
+         */
+        acf_register_block_type(array(
+            'name'              => 'stage',
+            'title'             => __(' [W-Section] Stage'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/w-stage.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] Stage', 'acf' ),
+        ));
+
+        /** 
+         * [W-Section] Gallery
+         */
+        acf_register_block_type(array(
+            'name'              => 'gallery',
+            'title'             => __(' [W-Section] Gallery'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/w-gallery.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] Gallery', 'acf' ),
+        ));
+
+        /** 
+         * [W-Section] Link Hiring
+         */
+        acf_register_block_type(array(
+            'name'              => 'linkhiring',
+            'title'             => __(' [W-Section] Link Hiring'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/w-linkhiring.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] Link Hiring', 'acf' ),
+        ));
+
+        /** 
+         * [W-Section] Values
+         */
+        acf_register_block_type(array(
+            'name'              => 'values',
+            'title'             => __(' [W-Section] Values'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/w-values.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] Values', 'acf' ),
+        )); 
+
+        /** 
+         * [W-Section] About Project
+         */
+        acf_register_block_type(array(
+            'name'              => 'abproject',
+            'title'             => __(' [W-Section] About Project'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/w-abproject.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] About Project', 'acf' ),
+        ));
+
+
+        /** 
+         * [W-Section] Image Text Revert
+         */
+        acf_register_block_type(array(
+            'name'              => 'imgtextrev',
+            'title'             => __(' [W-Section] Image Text Revert'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/w-imgtextrev.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] Image Text Revert', 'acf' ),
+        ));
     }
 
     
