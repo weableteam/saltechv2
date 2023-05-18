@@ -707,6 +707,81 @@ function tpa_acf_init_block_types() {
             'align'             => 'full',
             'keywords'          => array( '[W-Section] Image Text Revert', 'acf' ),
         ));
+
+         /** 
+         * [W-Section] Campaign
+         */
+        acf_register_block_type(array(
+            'name'              => 'campaign',
+            'title'             => __(' [W-Section] Campaign'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/campaign.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] Campaign', 'acf' ),
+        ));
+
+         /** 
+         * [W-Section] Page Header v5
+         */
+        acf_register_block_type(array(
+            'name'              => 'page-header-v5',
+            'title'             => __(' [W-Section] Page Header v5'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/page-header-v5.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] Page Header v5', 'acf' ),
+        ));
+
+         /** 
+         * [W-Section] Simple
+         */
+        acf_register_block_type(array(
+            'name'              => 'simple',
+            'title'             => __(' [W-Section] Simple'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/simple.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] Simple', 'acf' ),
+        ));
+
+         /** 
+         * [W-Section] Tab Ads
+         */
+        acf_register_block_type(array(
+            'name'              => 'tab-ads',
+            'title'             => __(' [W-Section] Tab Ads'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/tab-ads.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] Tab Ads', 'acf' ),
+        ));
+
+         /** 
+         * [W-Section] What You Need
+         */
+        acf_register_block_type(array(
+            'name'              => 'whatyouneed',
+            'title'             => __(' [W-Section] What You Need'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/whatyouneed.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] What You Need', 'acf' ),
+        ));
     }
 
     
