@@ -31,7 +31,68 @@ if( !empty($block['align']) ) {
 // Load values and assign defaults.
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-    <div class="text-center">Gallery</div>
+<div class="mt-4">
+        <div class="container ps_re">
+           <div class="row">
+                <div class="col-md-12">
+                    <p class="w-vl-p_title">
+                        Gallery
+                    </p>
+                </div>
+           </div>
+           <div class="wrapper">
+            <div class="slider-container">
+              <div class="slides-numbers" style="display: block">
+                <span class="active">01</span> / <span class="total"></span>
+              </div>
+              <div class="slider-holder row">
+                <div class="col-md-4">
+                  <div class="item ">
+                    <div class="media-wrap">
+                      <img
+                        src="<?=  get_stylesheet_directory_uri() . '/assets/images/aitem_silder.png' ?>" class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="item ">
+                    <div class="media-wrap">
+                      <img
+                        src="<?=  get_stylesheet_directory_uri() . '/assets/images/aitem_silder.png' ?>" class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="item ">
+                    <div class="media-wrap">
+                      <img
+                        src="<?=  get_stylesheet_directory_uri() . '/assets/images/aitem_silder.png' ?>" class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="item ">
+                    <div class="media-wrap">
+                      <img
+                        src="<?=  get_stylesheet_directory_uri() . '/assets/images/aitem_silder.png' ?>" class="img-fluid"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+               
+                
+                
+            </div>
+          </div>
+        </div>
+    </div>
 </section>
 <?php 
 //add_action( 'wp_footer', 'glScripts', 99, 1 );
@@ -44,3 +105,5 @@ if (!function_exists('glScripts'))   {
         </script>
     <?php }
 }
+
+
