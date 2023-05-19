@@ -22,7 +22,7 @@
 
 <div id="wrapper" >
 	<header  class="<?= (is_page_template('page-ads.php')) ? 'trans' : '' ?> <?= (is_page_template('page-branding.php')) ? 'd-none' : '' ?>">
-		<nav id="header" class="  <?=  (is_single() || is_page_template('page-Projects.php')) || is_page_template('pageBlogs.php') || (is_page_template('pageHiring.php')) || (is_page_template('pageShowProject.php')) || (is_page_template('pageBlogDetail.php'))  ? 'nofix' : '' ?> py-3 navbar navbar-expand-md <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
+		<nav id="header" class="  <?=  (is_single() || is_page_template('page-Projects.php')) || is_page_template('pageBlogs.php') || (is_page_template('pageHiring.php')) || (is_page_template('pageShowProject.php')) || (is_page_template('page-google.php')) || (is_page_template('pageBlogDetail.php'))  ? 'nofix' : '' ?> py-3 navbar navbar-expand-md <?php echo esc_attr( $navbar_scheme ); if ( isset( $navbar_position ) && 'fixed_top' === $navbar_position ) : echo ' fixed-top'; elseif ( isset( $navbar_position ) && 'fixed_bottom' === $navbar_position ) : echo ' fixed-bottom'; endif; if ( is_home() || is_front_page() ) : echo ' home'; endif; ?>">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php
