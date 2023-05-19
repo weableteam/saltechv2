@@ -782,6 +782,22 @@ function tpa_acf_init_block_types() {
             'align'             => 'full',
             'keywords'          => array( '[W-Section] What You Need', 'acf' ),
         ));
+
+        
+         /** 
+         * [W-Section] Page Header Image
+         */
+        acf_register_block_type(array(
+            'name'              => 'page-header-image',
+            'title'             => __(' [W-Section] Page Header Image'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/page-header-image.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] Page Header Image', 'acf' ),
+        ));
     }
 
     

@@ -29,119 +29,31 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assign defaults.
+$stages = get_field('stages');
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
 <div class="w-stage">
         <div class="container">
+            <?php if($stages) : ?>
             <ul class="list-items" onmousedown="startDragging(event)" onmousemove="dragScroll(event)" onmouseup="stopDragging(event)">
+                <?php foreach($stages as $item) : ?>
                 <li class="stage-items">
+                    <?php if($item['image']) : ?>
                     <div class="img-items">
-                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/Rectangle 216.webp' ?>" alt="">
+                        <img src="<?= esc_url($item['image']['url']) ?>" alt="">
                     </div>
-
+                    <?php endif; ?>
                     <div class="title-items"> 
-                        <span>2019</span>
+                        <?= ($item['title']) ? '<span>'.$item['title'].'</span>' : '' ?>
                         <div class="title-text">
-                            <p>
-                            Giai đoạn này Saltech cần một hai ba bốn năm sáu bảy tám chín mười 
-                            </p>
-                            <p>
-                            Giai đoạn này Saltech cần một hai ba bốn
-                            </p>
+                        <?= ($item['content']) ? $item['content'] : '' ?>
+                            
                         </div>
                     </div>
                 </li>
-
-                <li class="stage-items">
-                    <div class="img-items">
-                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/Rectangle 217.webp' ?>" alt="">
-                    </div>
-
-                    <div class="title-items"> 
-                        <span>2019</span>
-                        <div class="title-text">
-                            <p>
-                            Giai đoạn này Saltech cần một hai ba bốn năm sáu bảy tám chín mười 
-                            </p>
-                            <p>
-                            Giai đoạn này Saltech cần một hai ba bốn
-                            </p>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="stage-items">
-                    <div class="img-items">
-                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/Rectangle 217 (1).webp' ?>" alt="">
-                    </div>
-
-                    <div class="title-items"> 
-                        <span>2019</span>
-                        <div class="title-text">
-                            <p>
-                            Giai đoạn này Saltech cần một hai ba bốn năm sáu bảy tám chín mười 
-                            </p>
-                            <p>
-                            Giai đoạn này Saltech cần một hai ba bốn
-                            </p>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="stage-items">
-                    <div class="img-items">
-                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/Rectangle 216 (2).webp' ?>" alt="">
-                    </div>
-
-                    <div class="title-items"> 
-                        <span>2019</span>
-                        <div class="title-text">
-                            <p>
-                            Giai đoạn này Saltech cần một hai ba bốn năm sáu bảy tám chín mười 
-                            </p>
-                            <p>
-                            Giai đoạn này Saltech cần một hai ba bốn
-                            </p>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="stage-items">
-                    <div class="img-items">
-                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/Rectangle 216.webp' ?>" alt="">
-                    </div>
-
-                    <div class="title-items"> 
-                        <span>2019</span>
-                        <div class="title-text">
-                            <p>
-                            Giai đoạn này Saltech cần một hai ba bốn năm sáu bảy tám chín mười 
-                            </p>
-                            <p>
-                            Giai đoạn này Saltech cần một hai ba bốn
-                            </p>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="stage-items">
-                    <div class="img-items">
-                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/Rectangle 216 (1).webp' ?>" alt="">
-                    </div>
-
-                    <div class="title-items"> 
-                        <span>2019</span>
-                        <div class="title-text">
-                            <p>
-                            Giai đoạn này Saltech cần một hai ba bốn năm sáu bảy tám chín mười 
-                            </p>
-                            <p>
-                            Giai đoạn này Saltech cần một hai ba bốn
-                            </p>
-                        </div>
-                    </div>
-                </li>
+                <?php endforeach; ?>
             </ul>
+            <?php endif; ?>
         </div>
     </div>
 </section>

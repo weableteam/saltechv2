@@ -29,36 +29,31 @@ if (!empty($block['align'])) {
 }
 
 // Load values and assign defaults.
+$content = get_field('content');
+$image = get_field('image');
+
+
+
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12">
                 <div class="item-left">
-                    <h4 class="item-heading">LOREM IPSUM</h4>
-                    <h2 class="item-title">TITLE HƯỚNG TỚI TRANG TUYỂN DỤNG</h2>
-                    <p class="item-texts">
-                        <span class="item-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            porta bibendum sem. In vitae mi gravida, tempus neque eu,
-                            interdum risus. Ut tincidunt diam sed dolor mattis
-                            sollicitudin.
-                        </span>
-                        <br />
-                        <span class="item-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            porta bibendum sem. In vitae mi gravida, tempus neque eu,
-                            interdum risus. Ut tincidunt diam sed dolor mattis
-                            sollicitudin.
-                        </span>
-                    </p>
-                    <a href="#" class="btn-recruitment">Tuyển dụng</a>
+                    <?= ($content['small_title']) ? '<h4 class="item-heading">'.$content['small_title'].'</h4>' : '' ?>
+                    <?= ($content['title']) ? '<h2 class="item-title">'.$content['title'].'</h2>' : '' ?>
+                    <?= ($content['text_content']) ? $content['text_content'] : '' ?>
+                    <?php if($content['link']) : ?>
+                        <a href="<?= esc_url($content['link']['url']) ?>" class="btn-recruitment"><?= esc_attr($content['link']['title']) ?></a>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12">
+                <?php if($image) : ?>
                 <div class="item-image">
-                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Rectangle-214.webp" alt="" />
+                    <img src="<?= esc_url($image['url']) ?>" alt="" />
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
