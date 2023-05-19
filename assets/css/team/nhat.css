@@ -1085,11 +1085,7 @@
 .w-ms .mission-right {
   width: 8.289rem;
   height: 18.75rem;
-  background: linear-gradient(
-    180deg,
-    #ffffff 21.58%,
-    rgba(255, 255, 255, 0) 72.63%
-  );
+  background-image: url("http://localhost:10041/wp-content/uploads/2023/05/Rectangle-215-1.png");
   border-radius: 100px;
   display: flex;
   flex-direction: column;
@@ -1108,7 +1104,7 @@
 .w-ms .mision-people {
   width: 33.188rem;
   height: 33.188rem;
-  background: #f4e4ff;
+  background-image: url("http://localhost:10041/wp-content/uploads/2023/05/Rectangle-210.png");
   border-radius: 16.594rem;
   display: flex;
   align-items: center;
@@ -1192,7 +1188,7 @@
   width: 640.88px;
   margin-bottom: 20px;
 }
-.w-apj .about-item img {
+.w-apj .about-item > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1203,8 +1199,7 @@
   align-items: center;
   gap: 0 1.125rem;
   position: absolute;
-  left: 2.313rem;
-  bottom: 7rem;
+  bottom: 2rem;
   width: 26.5rem;
   height: 5.375rem;
   background: linear-gradient(
@@ -1213,8 +1208,17 @@
     rgba(6, 70, 102, 0) 106.99%
   );
   border-radius: 3.906rem;
-  overflow: hidden;
+  transition: all 450ms ease;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(2rem);
+  cursor: pointer;
 }
+.w-apj .about-item:hover .about-name {
+  visibility: visible;
+  opacity: 1;
+}
+
 .w-apj .about-name > span {
   width: 5.379rem;
   height: 5.379rem;
@@ -1223,6 +1227,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 100%;
+  border: 1px solid #26ffb1;
+  /* z-index: 1111; */
 }
 .w-apj .about-name-wrapper {
   color: #fff;
@@ -1338,7 +1344,6 @@
     margin-top: 2rem;
   }
   .w-apj .about-name {
-    left: 1.313rem;
     bottom: 7rem;
     width: 15.5rem;
     height: 4.375rem;
@@ -1349,6 +1354,9 @@
   }
 }
 @media (max-width: 739px) {
+  .w-ms {
+    padding-bottom: 0;
+  }
   .w-ms .mission-content {
     flex-direction: column;
   }
@@ -1366,5 +1374,31 @@
   }
   .w-ms .mission-container {
     padding-bottom: 0;
+  }
+  .w-ms .mision-people {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .w-ms .mision-people-img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .w-ms .mision-people-image {
+    width: 5.289rem;
+    height: 5.289rem;
+    margin-bottom: 50%;
+  }
+  .w-ms .mision-people-img:nth-child(7) {
+    transform: translateX(-15%) translateY(-65%);
+  }
+  .w-ms .mision-people-img:nth-child(3) {
+    transform: translateX(-85%) translateY(-65%);
+  }
+  .w-ms .mision-people-img:nth-child(4),
+  .w-ms .mision-people-img:nth-child(6) {
+    top: 50%;
+  }
+  .w-ms .mision-people-img:nth-child(5) {
+    top: 60%;
   }
 }
