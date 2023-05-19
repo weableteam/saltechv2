@@ -31,7 +31,70 @@ if( !empty($block['align']) ) {
 // Load values and assign defaults.
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-    <div class="text-center">Simple</div>
+    <div class="w-sp">
+        <div class="container">
+            <div class="sp-header">
+                <h2>
+                TẤT CẢ NHƯNG THỨ PHỨC TẠP SẼ TRỞ NÊN ĐƠN GIẢN KHI BẠN TÌM ĐẾN VỚI SALTECH
+                </h2>
+                <p>
+                    Chúng tôi không chỉ đơn vị cung cấp quảng cáo, chúng tôi là những người có năng lực nghiên cứu, xây dựng, lập kế hoạch, tư vấn và thực thi chiến dịch quảng cáo Google Ads cho từng mô hình và quy mô doanh nghiệp.
+                </p> 
+            </div>
+            
+            <ul class="main-content"> 
+                <li class="items">
+                    <div class="img-items img-wrap">
+                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/simple1.webp' ?>" alt="">
+                    </div>
+                    <div class="title-items">
+                        <p>Saltech luôn đảm bảo cho bạn thiết lập mức ngân sách hợp lý.</p>
+                    </div>
+                </li>
+                <li class="items">
+                    <div class="img-items img-wrap">
+                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/simple2.webp' ?>" alt="">
+                    </div>
+                    <div class="title-items">
+                        <p>Saltech luôn đảm bảo cho bạn thiết lập mức ngân sách hợp lý.</p>
+                    </div>
+                </li>
+                <li class="items">
+                    <div class="img-items img-wrap">
+                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/simple3.webp' ?>" alt="">
+                    </div>
+                    <div class="title-items">
+                        <p>Saltech luôn đảm bảo cho bạn thiết lập mức ngân sách hợp lý.</p>
+                    </div>
+                </li>
+                <li class="items">
+                    <div class="img-items img-wrap">
+                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/simple1.webp' ?>" alt="">
+                    </div>
+                    <div class="title-items">
+                        <p>Saltech luôn đảm bảo cho bạn thiết lập mức ngân sách hợp lý.</p>
+                    </div>
+                </li>
+                <li class="items">
+                    <div class="img-items img-wrap">
+                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/simple3.webp' ?>" alt="">
+                    </div>
+                    <div class="title-items">
+                        <p>Saltech luôn đảm bảo cho bạn thiết lập mức ngân sách hợp lý.</p>
+                    </div>
+                </li>
+                <li class="items">
+                    
+                    <div class="title-items">
+                        <div>
+                            <img src="http://saltechv2.local/wp-content/uploads/2023/05/Group-881.webp" alt="">
+                        </div>
+                        <p>Và thật nhiều những lợi ích khác khi bạn được tư vấn và hỗ trợ bởi các chuyên gia đầu ngành của chúng tôi...</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </section>
 <?php 
 //add_action( 'wp_footer', 'spScripts', 99, 1 );
