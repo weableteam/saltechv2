@@ -43,24 +43,47 @@ if( !empty($block['align']) ) {
             <div class="about-slider">
                 <div class="about-item">
                     <img src="http://localhost:10041/wp-content/uploads/2023/05/Rectangle-215.webp" alt="" />
+                    <div class="about-name">
+                        <span><img src="http://localhost:10041/wp-content/uploads/2023/05/Group-903.webp" alt=""></span>
+                        <div class="about-name-wrapper">
+                            <h4>Tên dự án</h4>
+                            <p>Tên dịch vụ</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-item">
                     <img src="http://localhost:10041/wp-content/uploads/2023/05/Rectangle-215.webp" alt="" />
+                    <div class="about-name">
+                        <span><img src="http://localhost:10041/wp-content/uploads/2023/05/Group-903.webp" alt=""></span>
+                        <div class="about-name-wrapper">
+                            <h4>Tên dự án</h4>
+                            <p>Tên dịch vụ</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-item">
                     <img src="http://localhost:10041/wp-content/uploads/2023/05/Rectangle-215.webp" alt="" />
+                    <div class="about-name">
+                        <span><img src="http://localhost:10041/wp-content/uploads/2023/05/Group-903.webp" alt=""></span>
+                        <div class="about-name-wrapper">
+                            <h4>Tên dự án</h4>
+                            <p>Tên dịch vụ</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-item">
                     <img src="http://localhost:10041/wp-content/uploads/2023/05/Rectangle-215.webp" alt="" />
+                    <div class="about-name">
+                        <span><img src="http://localhost:10041/wp-content/uploads/2023/05/Group-903.webp" alt=""></span>
+                        <div class="about-name-wrapper">
+                            <h4>Tên dự án</h4>
+                            <p>Tên dịch vụ</p>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-            <div class="about-name">
-                <span><img src="http://localhost:10041/wp-content/uploads/2023/05/Group-903.webp" alt=""></span>
-                <div class="about-name-wrapper">
-                    <h4>Tên dự án</h4>
-                    <p>Tên dịch vụ</p>
-                </div>
-            </div>
+
             <div class="about-slider--counter">1/4</div>
         </div>
     </div>
