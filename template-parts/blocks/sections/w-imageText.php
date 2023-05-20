@@ -29,6 +29,10 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assign defaults.
+$title = get_field('title');
+$content = get_field('content');
+$image = get_field('image');
+
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
     <div class="container img_text_box">
@@ -38,19 +42,24 @@ if( !empty($block['align']) ) {
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="w-textimg-content">
+                            <?php if($title) : ?>
                             <h3 class="w-textimg-title">
-                                TẠO SAO SALTECH BẮT ĐẦU
+                                <?= $title ?>
                             </h3>
+                            <?php endif; ?>
+                            <?php if($content) : ?>
                             <p class="w-textimg-p">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta bibendum sem. In vitae mi gravida, tempus neque eu, interdum risus. Ut tincidunt diam sed dolor mattis sollicitudin. Donec aliquam laoreet diam id vehicula. Suspendisse odio lorem, fermentum ac justo sit amet, fermentum tristique ligula. Nam fringilla auctor nunc id pulvinar.
+                                <?= $content ?>
                             </p>
+                            <?php endif; ?>
                         </div>
                     </div>
                     <div class="col-lg-6">
+                        <?php if($image) : ?>
                         <div class="w-textimg_peopole">
-                            <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/item_pepole.png' ?>" alt="" class="">
+                            <img src="<?=  esc_url($image['url']) ?>" alt="" class="img-fluid">
                         </div>
-                        
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

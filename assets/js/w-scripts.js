@@ -220,5 +220,42 @@ appHeight();
   //   }
   //   });
   //   });
+  $(document).ready(function () {
+    $(".w-apj .about-slider").slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: true,
+      draggable: true,
+      prevArrow: `<button type='button' class='slick-prev slick-arrow'><i class="bi bi-chevron-left"></i></button>`,
+      nextArrow: `<button type='button' class='slick-next slick-arrow'><i class="bi bi-chevron-right"></i></button>`,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            arrows: false,
+            infinite: false,
+          },
+        },
+      ],
+      // autoplay: true,
+      // autoplaySpeed: 1000,
+    });
+  });
+  $(".w-apj .about-slider").on(
+    "afterChange",
+    function (event, slick, currentSlide) {
+      var counter = $(this).closest(".w-apj").find(".about-slider--counter");
+      counter.text(currentSlide + 1 + "/" + slick.slideCount);
+    }
+  );
     })(jQuery);
 
