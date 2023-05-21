@@ -8685,3 +8685,34 @@ img{
 .w-post .slick-next{
 	margin-left: 1.3rem;
 }
+
+
+.w-gl .slick-prev,.w-gl  .slick-next{
+	font-size: 1rem;
+	border-radius: 100%;
+	background-color: unset;
+	color: black;
+	position: unset;
+	border: 1px solid black;
+	transform: unset;
+}
+.w-gl .slides-numbers{
+    display: flex !important;
+    justify-content: center;
+    gap: 0.3rem;
+    position: absolute;
+    align-items: center;
+    top: 0;
+    right: 15px;
+
+}
+
+.w-gl .slick-prev::before,.w-gl  .slick-next::before{
+	content: unset !important; 
+}
+.w-gl .slick-prev{
+	margin-right: 1.3rem;
+}
+.w-gl .slick-next{
+	margin-left: 1.3rem;
+}
