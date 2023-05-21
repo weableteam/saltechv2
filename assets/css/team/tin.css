@@ -1432,10 +1432,10 @@
 .w-itr .item-image {
   margin-left: auto;
   width: 90%;
+  padding-top: 80%;
 }
 .w-itr .item-image > img {
   width: 100%;
-  height: auto;
   object-fit: cover;
   border-radius: 20px;
 }

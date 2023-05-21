@@ -29,67 +29,45 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assign defaults.
+$title = get_field('title');
+$list = get_field('list');
+
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-<div class="mt-4">
-        <div class="container ps_re">
-           <div class="row">
+  <div class="mt-4">
+      <div class="container ps_re">
+          <div class="row">
+            <?php if($title) : ?>
                 <div class="col-md-12">
                     <p class="w-vl-p_title">
-                        Gallery
+                      <?= $title ?>
                     </p>
                 </div>
-           </div>
-           <div class="wrapper">
-            <div class="slider-container">
-              <div class="slides-numbers" style="display: block">
-                <span class="active">01</span> / <span class="total"></span>
-              </div>
-              <div class="slider-holder row">
-                <div class="col-md-4">
-                  <div class="item ">
-                    <div class="media-wrap">
-                      <img
-                        src="<?=  get_stylesheet_directory_uri() . '/assets/images/aitem_silder.png' ?>" class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="item ">
-                    <div class="media-wrap">
-                      <img
-                        src="<?=  get_stylesheet_directory_uri() . '/assets/images/aitem_silder.png' ?>" class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="item ">
-                    <div class="media-wrap">
-                      <img
-                        src="<?=  get_stylesheet_directory_uri() . '/assets/images/aitem_silder.png' ?>" class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="item ">
-                    <div class="media-wrap">
-                      <img
-                        src="<?=  get_stylesheet_directory_uri() . '/assets/images/aitem_silder.png' ?>" class="img-fluid"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-               
-                
-                
+            <?php endif ?>
+          </div>
+          <div class="wrapper">
+          <div class="slider-container">
+            <div class="slides-numbers" style="display: block">
+              <span class="active">01</span> / <span class="total"></span>
             </div>
+            <?php if($list) : ?>
+            <div class="slider-holder row">
+              <?php foreach($list as $item) : ?>
+              <div class="col-md-4">
+                <div class="item ">
+                  <div class="media-wrap img-wrap">
+                    <?php if($item['image']) : ?>
+                    <img
+                      src="<?= esc_url($item['image']['url']) ?>" class="img-fluid"
+                      alt=""
+                    />
+                    <?php endif; ?>
+                  </div>
+                </div>
+              </div>
+              <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
           </div>
         </div>
     </div>

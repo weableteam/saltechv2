@@ -29,61 +29,61 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assign defaults.
+$title = get_field('title');
+$list = get_field('list');
+
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
     <div class="container">
         <div class="about-container">
+            <?php if($title) : ?>
             <div class="about-heading">
                 <h1>
-                    Title dẫn xem dự án. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Duis porta bibendum sem. In vitae mi gravida,
-                    tempus neque eu, interdum ri.
+                    <?= $title ?>
                 </h1>
             </div>
+            <?php endif; ?>
+            <?php if($list) : ?>
             <div class="about-slider">
-                <div class="about-item">
-                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Rectangle-215.webp" alt="" />
-                    <div class="about-name">
-                        <span><img src="http://localhost:10041/wp-content/uploads/2023/05/Group-903.webp" alt=""></span>
-                        <div class="about-name-wrapper">
-                            <h4>Tên dự án</h4>
-                            <p>Tên dịch vụ</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-item">
-                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Rectangle-215.webp" alt="" />
-                    <div class="about-name">
-                        <span><img src="http://localhost:10041/wp-content/uploads/2023/05/Group-903.webp" alt=""></span>
-                        <div class="about-name-wrapper">
-                            <h4>Tên dự án</h4>
-                            <p>Tên dịch vụ</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-item">
-                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Rectangle-215.webp" alt="" />
-                    <div class="about-name">
-                        <span><img src="http://localhost:10041/wp-content/uploads/2023/05/Group-903.webp" alt=""></span>
-                        <div class="about-name-wrapper">
-                            <h4>Tên dự án</h4>
-                            <p>Tên dịch vụ</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-item">
-                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Rectangle-215.webp" alt="" />
-                    <div class="about-name">
-                        <span><img src="http://localhost:10041/wp-content/uploads/2023/05/Group-903.webp" alt=""></span>
-                        <div class="about-name-wrapper">
-                            <h4>Tên dự án</h4>
-                            <p>Tên dịch vụ</p>
-                        </div>
-                    </div>
-                </div>
+                <?php foreach($list as $item) : ?>
+                    <?php if($item['project']) :
+                       $project = $item['project'];
+                       setup_postdata($project);
+                       $project_id = $project->ID; // Lấy ID của bài viết
+                       ?>
+                        <a href="#" class="link-prj about-item" project-id="<?= $project_id ?>">
+                            <div class="img-wrap">
+                                <?php echo get_the_post_thumbnail($project) ?>
+                            </div>    
+                            <div class="about-name">
+                                <span ><img src="../wp-content/uploads/2023/05/Group-903.webp" alt=""></span>
+                                <div class="about-name-wrapper">
+                                    <h4><?= get_the_title($project  ) ?></h4>
+                                    <p>
+                                    <?php
+                                    // Lấy danh sách thuộc tính taxonomy
+                                    $taxonomies = get_the_terms($project, 'linh-vuc-du-an');
 
+                                    if ($taxonomies && !is_wp_error($taxonomies)) {
+                                        $taxonomy_parent = '';
+                                        foreach ($taxonomies as $taxonomy) {
+                                            if ($taxonomy->parent == 0) {
+                                                $taxonomy_parent = $taxonomy->name;
+                                                break;
+                                            }
+                                        }
+                                        echo $taxonomy_parent;
+                                    }
+                                    ?>
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                        <?php wp_reset_postdata( ); ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </div>
-
+            <?php endif; ?>
             <div class="about-slider--counter">1/4</div>
         </div>
     </div>
