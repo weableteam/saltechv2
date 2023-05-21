@@ -983,7 +983,6 @@
 }
 /* lh */
 .w-lh {
-  padding: 9.375rem 0;
 }
 .w-lh .item-left {
   width: 27.063rem;
@@ -1074,6 +1073,7 @@
 .w-ms .mission-left {
   line-height: 1.313rem;
   text-align: justify;
+  flex: 1;
   letter-spacing: 0.02em;
   color: #fff;
 }
@@ -1083,13 +1083,8 @@
   font-weight: 500;
 }
 .w-ms .mission-right {
-  width: 8.289rem;
-  height: 18.75rem;
+  width: 23%;
   background-image: url("http://localhost:10041/wp-content/uploads/2023/05/Rectangle-215-1.png");
-  border-radius: 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 2.188rem 0;
 }
 .w-ms .mission-right-item {
   width: 8.289rem;
@@ -1162,7 +1157,6 @@
 /*end  mission */
 /* about project */
 .w-apj {
-  padding: 4rem 0;
 }
 .w-apj .about-container {
   position: relative;
@@ -1173,7 +1167,6 @@
 .w-apj .about-heading > h1 {
   font-weight: 700;
   font-size: 2rem;
-  line-height: 2.625rem;
   text-align: center;
   letter-spacing: 0.02em;
   color: #064666;
@@ -1326,7 +1319,7 @@
 /* campaign */
 .w-ca {
   padding: 4rem 0;
-  background-image: url("http://localhost:10041/wp-content/uploads/2023/05/image-3.webp");
+  background-image: url("/wp-content/uploads/2023/03/image-1.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1334,7 +1327,6 @@
 .w-ca .campaign-heading {
   font-weight: 700;
   font-size: 2rem;
-  line-height: 2.625rem;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
@@ -1365,8 +1357,8 @@
 }
 .w-ca .campaign-item {
   max-width: 31.313rem;
+  align-items: center;
   display: flex;
-  align-items: flex-start;
   gap: 0 1.25rem;
   background: rgba(217, 217, 217, 0.15);
   backdrop-filter: blur(9.5px);
@@ -1463,7 +1455,7 @@
     padding: 0;
   }
   .w-apj .about-heading > h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .w-apj .about-slider {
     margin-top: 2rem;
@@ -1483,7 +1475,6 @@
     padding: 0 0rem;
   }
   .w-ca .campaign-item {
-    max-width: 21.313rem;
   }
   .w-ca .campaign-chose {
     margin-top: 1.75rem;

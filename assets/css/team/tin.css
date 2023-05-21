@@ -1186,8 +1186,6 @@
 
 /* w-stage */
 .w-stage{
-  padding: 1rem 0;
-  margin: 1rem 0;
 }
 
 .w-stage ul{
@@ -1278,6 +1276,7 @@
 
 .w-stage .list-items::before{
   content: "";
+  left: 0;
   display: block;
   height: 1px;
   width: 100%;
@@ -1290,6 +1289,7 @@
 .w-stage .list-items::after{
   content: "";
   display: block;
+  left: 0;
   height: 5px;
   width: 5px;
   border-radius: 50%;
@@ -1485,7 +1485,8 @@
 
 /* SIMPLE */
 .w-sp{
-  background-image: url(http://saltechv2.local/wp-content/uploads/2023/05/image-3-5.png);
+  background-image: url("/wp-content/uploads/2023/03/image-1.webp");
+
   background-size: cover;
   padding: 2rem 0;
 }
@@ -1506,6 +1507,7 @@
 
 .w-sp .main-content{
   width: 100%;
+  list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -1540,6 +1542,9 @@
   padding: 3rem;
   text-align: center;
   color: #FFFFFF;
+  min-height: 14rem;
+  display: flex;
+  align-items: center;
   font-size: 1.2rem;
   font-weight: 600;
   background: rgba(6, 70, 102, 0.24);
@@ -1553,6 +1558,7 @@
 .w-sp .main-content li:last-child .title-items{
   text-align: inherit;
   background: none;
+  display: block;
   border: none;
   border-radius: 0;
   padding: 2rem 0;
@@ -1587,4 +1593,20 @@
     font-size: 1rem;
     font-weight: 500;
   }
+}
+
+.w-pageHeaderv5 .head{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0rem;
+  width: 100%;
+}
+.w-pageHeaderv5 .head p{
+  width: 70%;
+  margin: 1rem auto;
+}
+
+.w-pageHeaderv5 .head h2{
+  color: #064666;
 }

@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'w-phi';
+$className = 'w-phi pt-lg-5 pt-3';
 
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];

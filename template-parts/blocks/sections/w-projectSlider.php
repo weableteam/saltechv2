@@ -89,7 +89,9 @@ if( !empty($block['align']) ) {
               wp_reset_postdata();?>
             </div>   
             <div class="slick-number" style="display: block;">
-                <span class="active">01</span> / <span class="total"></span>
+                <button type="button" class="slick-prev "><i class="bi bi-chevron-left"></i></button>
+                    <span class="active">01</span> / <span class="total"></span>
+                <button type="button" class="slick-next "><i class="bi bi-chevron-right"></i> </button>
             </div>
     </div>
 </div>
@@ -117,10 +119,8 @@ if (!function_exists('pSLiderScripts'))   {
                 slidesToShow: 3,
                 // autoplay: true,
                 speed: 300,
-                prevArrow:
-                    '<button type="button" class="slick-prev "><i class="bi bi-chevron-left"></i></button>',
-                nextArrow:
-                    '<button type="button" class="slick-next "><i class="bi bi-chevron-right"></i> </button>',
+                prevArrow: $('.w-pSlider .slick-prev'),
+                    nextArrow: $('.w-pSlider .slick-next'),
                 responsive: [
                     {
                         breakpoint: 992,

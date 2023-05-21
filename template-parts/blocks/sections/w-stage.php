@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'w-st';
+$className = 'w-st py-lg-5 py-3';
 
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
@@ -33,7 +33,7 @@ $stages = get_field('stages');
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
 <div class="w-stage">
-        <div class="container">
+        <div class="">
             <?php if($stages) : ?>
             <ul class="list-items" onmousedown="startDragging(event)" onmousemove="dragScroll(event)" onmouseup="stopDragging(event)">
                 <?php foreach($stages as $item) : ?>
@@ -62,8 +62,17 @@ add_action( 'wp_footer', 'stScripts', 99, 1 );
 if (!function_exists('stScripts'))   {
     function stScripts() { ?>
         <script async>
+            
             ( function ( $ ) {
-                
+                var marginLeft = $('.container').css('margin-left');
+        console.log(marginLeft)
+        $('.w-stage ul').css('padding-left',`calc(${marginLeft} + 15px)`)
+                window.addEventListener('resize', function() {
+        var marginLeft = $('.container').css('margin-left');
+        console.log(marginLeft)
+        $('.w-stage ul').css('padding-left',`calc(${marginLeft} + 15px)`)
+    
+        });
             }( jQuery ) );
 
             var container = document.querySelector('.list-items');
@@ -95,6 +104,7 @@ if (!function_exists('stScripts'))   {
             const walk = (x - startX) * 3; // scroll speed
             container.scrollLeft = scrollLeft - walk;
             }
+           
         </script>
     <?php }
 }

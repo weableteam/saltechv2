@@ -29,69 +29,43 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assign defaults.
+$content = get_field('content');
+$image = get_field('image');
+
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
     <div class="container">
         <div class="row">
+            <?php if($content) : ?>
             <div class="col-lg-7 col-md-12">
                 <div class="mission-container">
+                    <?php if($content['title']) : ?>
                     <div class="mission-heading-wrapper">
-                        <h2 class="mission-heading">OUR MISSION</h2>
+                        <h2 class="mission-heading"><?= $content['title'] ?></h2>
                     </div>
+                    <?php endif; ?>
                     <div class="mission-content">
+                        <?php if($content['content']) : ?>
                         <div class="mission-left">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Duis porta bibendum sem. In vitae mi gravida, tempus neque
-                                eu, interdum risus. Ut tincidunt diam sed dolor mattis
-                                sollicitudin. Donec aliquam laoreet diam id vehicula.
-                                Suspendisse odio lorem, fermentum ac justo sit amet,
-                                fermentum tristique ligula. Nam fringilla auctor nunc id
-                                pulvinar.
-                            </p>
-                            <ul class="mission-list">
-                                <li><a href="#" class="mission-item">Cáiwwhasn</a></li>
-                                <li><a href="#" class="mission-item">Hisuaozn</a></li>
-                                <li><a href="#" class="mission-item">Couhsirahsa</a></li>
-                            </ul>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                Duis porta bibendum sem. In vitae mi gravida, tempus neque
-                                eu, interdum risus. Ut tincidunt dia
-                            </p>
+                            <?= $content['content'] ?> 
                         </div>
-                        <div class="mission-right">
-                            <div class="mission-right-item">
-                                <img src="http://localhost:10041/wp-content/uploads/2023/05/mision-bottom.webp"
-                                    alt="" />
-                            </div>
-                            <div class="mission-right-item">
-                                <img src="http://localhost:10041/wp-content/uploads/2023/05/mision-top.webp" alt=""
-                                    class="mission-icon" />
-                            </div>
+                        <?php endif; ?>
+                        <?php if($content['image']) : ?>
+                        <div class="mission-right d-lg-block d-none">
+                            <img class="img-fluid" src="<?= esc_url($content['image']['url']) ?>" alt="">
                         </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
+            <?php endif; ?>
+            <?php if($image) : ?>
             <div class="col-lg-5 col-md-12 people-mb">
                 <div class="mision-people">
-                    <div class="mision-people-image">
-                        <img src="http://localhost:10041/wp-content/uploads/2023/05/mision-right.webp" alt="" />
-                    </div>
-                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Ellipse-38.webp" alt=""
-                        class="mision-people-img" />
-                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Ellipse-38.webp" alt=""
-                        class="mision-people-img" />
-                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Ellipse-38.webp" alt=""
-                        class="mision-people-img" />
-                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Ellipse-38.webp" alt=""
-                        class="mision-people-img" />
-                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Ellipse-38.webp" alt=""
-                        class="mision-people-img" />
-                    <img src="http://localhost:10041/wp-content/uploads/2023/05/Ellipse-38.webp" alt=""
-                        class="mision-people-img" />
+                   <img class="img-fluid" src="<?= esc_url($image['url']) ?>" alt="">
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>

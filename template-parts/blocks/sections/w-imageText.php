@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'w-it';
+$className = 'w-it py-lg-5 py-3';
 
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
@@ -37,7 +37,7 @@ $image = get_field('image');
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
     <div class="container img_text_box">
         <div class="mt-4">
-        <div class="container">
+        <div class="">
             <div class="w-textimg" style="background-image: url('<?=  get_stylesheet_directory_uri() . '/assets/images/br_w_vl.png' ?>')">
                 <div class="row">
                     <div class="col-lg-6">

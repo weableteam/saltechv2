@@ -29,70 +29,46 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assign defaults.
+$title = get_field('title');
+$content = get_field('content');
+$list = get_field('list');
+
+
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
     <div class="w-sp">
         <div class="container">
             <div class="sp-header">
-                <h2>
-                TẤT CẢ NHƯNG THỨ PHỨC TẠP SẼ TRỞ NÊN ĐƠN GIẢN KHI BẠN TÌM ĐẾN VỚI SALTECH
-                </h2>
-                <p>
-                    Chúng tôi không chỉ đơn vị cung cấp quảng cáo, chúng tôi là những người có năng lực nghiên cứu, xây dựng, lập kế hoạch, tư vấn và thực thi chiến dịch quảng cáo Google Ads cho từng mô hình và quy mô doanh nghiệp.
-                </p> 
+                <?= ($title) ? '<h2>'.$title.'</h2>' : '' ?>
+                <?= ($content) ? '<p>'.$content.'</p>' : '' ?>
             </div>
-            
+            <?php if($list) : ?>
             <ul class="main-content"> 
+                <?php foreach($list as $item) : ?>
                 <li class="items">
+                    <?php if($item['image']) : ?>
                     <div class="img-items img-wrap">
-                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/simple1.webp' ?>" alt="">
+                        <img src="<?=  esc_url($item['image']['url']) ?>" alt="">
                     </div>
+                    <?php endif; ?>
+                    <?php if($item['content']) : ?>
                     <div class="title-items">
-                        <p>Saltech luôn đảm bảo cho bạn thiết lập mức ngân sách hợp lý.</p>
+                        <p><?= $item['content'] ?> </p>
                     </div>
+                    <?php endif; ?>
                 </li>
-                <li class="items">
-                    <div class="img-items img-wrap">
-                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/simple2.webp' ?>" alt="">
-                    </div>
-                    <div class="title-items">
-                        <p>Saltech luôn đảm bảo cho bạn thiết lập mức ngân sách hợp lý.</p>
-                    </div>
-                </li>
-                <li class="items">
-                    <div class="img-items img-wrap">
-                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/simple3.webp' ?>" alt="">
-                    </div>
-                    <div class="title-items">
-                        <p>Saltech luôn đảm bảo cho bạn thiết lập mức ngân sách hợp lý.</p>
-                    </div>
-                </li>
-                <li class="items">
-                    <div class="img-items img-wrap">
-                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/simple1.webp' ?>" alt="">
-                    </div>
-                    <div class="title-items">
-                        <p>Saltech luôn đảm bảo cho bạn thiết lập mức ngân sách hợp lý.</p>
-                    </div>
-                </li>
-                <li class="items">
-                    <div class="img-items img-wrap">
-                        <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/simple3.webp' ?>" alt="">
-                    </div>
-                    <div class="title-items">
-                        <p>Saltech luôn đảm bảo cho bạn thiết lập mức ngân sách hợp lý.</p>
-                    </div>
-                </li>
+                <?php endforeach; ?>
                 <li class="items">
                     
                     <div class="title-items">
                         <div>
-                            <img src="http://saltechv2.local/wp-content/uploads/2023/05/Group-881.webp" alt="">
+                            <img src="/wp-content/uploads/2023/05/Group-881.webp" alt="">
                         </div>
                         <p>Và thật nhiều những lợi ích khác khi bạn được tư vấn và hỗ trợ bởi các chuyên gia đầu ngành của chúng tôi...</p>
                     </div>
                 </li>
             </ul>
+            <?php endif; ?>
         </div>
     </div>
 </section>

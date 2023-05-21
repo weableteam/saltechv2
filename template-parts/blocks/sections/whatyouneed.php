@@ -29,35 +29,36 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assign defaults.
+$title = get_field('title');
+$list = get_field('list');
+$image = get_field('image');
+
+
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
     <div class="container pb-5">
-        <h2 class="text-center">BẠN CẦN CHUẨN BỊ GÌ KHI TÌM KIẾM CÁC ĐƠN VỊ TRIỂN KHAI GOOGLE ADS?</h2>
+        <?php if($title) : ?>
+            <h2 class="text-center"><?= $title ?></h2>
+        <?php endif; ?>
         <div class="row align-items-center mb-5">
+            <?php if($list) : ?>
             <div class="col-lg-6">
                 <div class="content-texts">
+                    <?php foreach($list as $item) : ?>
                     <div class="text">
-                        <h4>Xác định mục tiêu rõ ràng</h4>
-                        <p>Mỗi thời điểm khác nhau trong quá trình phát triển, chúng ta có những mục tiêu khác nhau: Doanh số bán hàng, thương hiệu. Vì vậy hãy xác định rõ mong muốn tại thời điểm đó là gì, chúng tôi sẽ có những chiến lược phù hợp cho bạn.</p>
+                        <?= ($item['name']) ? '<h4>'.$item['name'].'</h4>' : ''  ?>
+                        <?= ($item['detail']) ? '<p>'.$item['detail'].'</p>' : ''  ?>
                     </div>
-                    <div class="text">
-                        <h4>Xác định mục tiêu rõ ràng</h4>
-                        <p>Mỗi thời điểm khác nhau trong quá trình phát triển, chúng ta có những mục tiêu khác nhau: Doanh số bán hàng, thương hiệu. Vì vậy hãy xác định rõ mong muốn tại thời điểm đó là gì, chúng tôi sẽ có những chiến lược phù hợp cho bạn.</p>
-                    </div>
-                    <div class="text">
-                        <h4>Xác định mục tiêu rõ ràng</h4>
-                        <p>Mỗi thời điểm khác nhau trong quá trình phát triển, chúng ta có những mục tiêu khác nhau: Doanh số bán hàng, thương hiệu. Vì vậy hãy xác định rõ mong muốn tại thời điểm đó là gì, chúng tôi sẽ có những chiến lược phù hợp cho bạn.</p>
-                    </div>
-                    <div class="text">
-                        <h4>Xác định mục tiêu rõ ràng</h4>
-                        <p>Mỗi thời điểm khác nhau trong quá trình phát triển, chúng ta có những mục tiêu khác nhau: Doanh số bán hàng, thương hiệu. Vì vậy hãy xác định rõ mong muốn tại thời điểm đó là gì, chúng tôi sẽ có những chiến lược phù hợp cho bạn.</p>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
+            <?php endif; ?>
             <div class="col-lg-6">
+                <?php if($image) : ?>
                 <div class="imgMain img-wrap">
-                    <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/quiz show-amico 1.webp' ?>" alt="">
+                    <img src="<?=  esc_url($image['url']) ?>" alt="">
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

@@ -82,7 +82,9 @@ if( !empty($block['align']) ) {
                     ?>
                 </div>
                 <div class="slides-numbers" style="display: block;">
-                    <span class="active">01</span> / <span class="total"></span>
+                    <button type="button" class="slick-prev "><i class="bi bi-chevron-left"></i></button>
+                        <span class="active">01</span> / <span class="total"></span>
+                    <button type="button" class="slick-next "><i class="bi bi-chevron-right"></i> </button>
                 </div>
             </div>
         </div>
@@ -110,10 +112,8 @@ if (!function_exists('postsScripts'))   {
                         speed: 300,
                         slidesToShow: 2,
                         slidesToScroll: 1,
-                        prevArrow:
-                        '<button type="button" class="slick-prev "><i class="bi bi-arrow-left-circle"></i></button>',
-                        nextArrow:
-                        '<button type="button" class="slick-next "><i class="bi bi-arrow-right-circle"></i> </button>',
+                        prevArrow: $('.w-post .slick-prev'),
+                        nextArrow: $('.w-post .slick-next'),
                         responsive: [
                             {
                             breakpoint: 767,

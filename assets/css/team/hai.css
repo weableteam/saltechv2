@@ -280,9 +280,10 @@ img {
 
 /* w-listImgPartner */
 .w-listImgPartner .title {
-    color: #686868;
+    color: #064666;
     margin-bottom: 3rem;
     font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .w-listImgPartner .list {
@@ -301,7 +302,7 @@ img {
 
 @media screen and (max-width: 541px) {
     .w-listImgPartner .title {
-        font-size: .8rem;
+        font-size: 1.3rem;
     }
 
     .w-listImgPartner .list {

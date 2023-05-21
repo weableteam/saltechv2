@@ -30,13 +30,11 @@ if( !empty($block['align']) ) {
 
 // Load values and assign defaults.
 $banner = get_field('banner');
-
-
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
     <div class="banner img-wrap">
         <?php if($banner['image']) : ?>
-        <img src="<?= esc_url($banner['image']['url']) ?>" alt="<?= esc_attr($banner['image_banner']['alt']) ?>">
+        <img src="<?= esc_url($banner['image']['url']) ?>" alt="<?= esc_attr($banner['image']['alt']) ?>">
         <?php endif; ?>
         <div class="head text-center">
             <?= ($banner['title'] ? '<h2>'.$banner['title'].'</h2>' : '') ?>

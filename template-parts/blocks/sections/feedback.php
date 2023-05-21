@@ -95,8 +95,8 @@ if (!function_exists('feedbackScripts'))   {
                     slidesToShow: 1,
                     // autoplay: true,
                     speed: 300,
-                    prevArrow: $('.slick-prev'),
-                    nextArrow: $('.slick-next'),
+                    prevArrow: $('.w-feedback .slick-prev'),
+                    nextArrow: $('.w-feedback .slick-next'),
                     responsive: [
                         {
                             breakpoint: 992,

@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'w-gl';
+$className = 'w-gl py-lg-5 py-3';
 
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
@@ -48,7 +48,9 @@ $list = get_field('list');
           <div class="wrapper">
           <div class="slider-container">
             <div class="slides-numbers" style="display: block">
-              <span class="active">01</span> / <span class="total"></span>
+              <button type="button" class="slick-prev "><i class="bi bi-chevron-left"></i></button>
+                    <span class="active">01</span> / <span class="total"></span>
+                <button type="button" class="slick-next "><i class="bi bi-chevron-right"></i> </button>
             </div>
             <?php if($list) : ?>
             <div class="slider-holder row">

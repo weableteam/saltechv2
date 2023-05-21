@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'w-vl';
+$className = 'w-vl py-lg-5 py-3';
 
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
@@ -29,65 +29,38 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assign defaults.
+$title = get_field('title');
+$list = get_field('list');
+
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-<div class="container">
-                <p class="w-vl-p_title">
-                    OUR VALUES
-                </p>
-                <div class="w-vl-content-box" style="background-image: url('<?=  get_stylesheet_directory_uri() . '/assets/images/br_w_vl.png' ?>')" >
-                    
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="w-vl-item active text-center">
-                                <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/item_icon.png' ?>" class="icon-item_img" alt="">
-                                <h4 class="w-vl-h4-title">
-                                    giá trị 1
-                                </h4>
-                                <p class="w-vl-title-p">
-                                    Lorem ipsum dolor sit amet consectetur . Accusamus asperiores officiis facere aliquam iure, obcaecati totam aspernatur nesciunt quia?
-                                </p>
-                                <p class="w-vl-title-p">
-                                    Accusamus asperiores officiis facere aliquam iure, obcaecati totam aspernatur nesciunt quia?
-                                </p>
-                            </div>
-                            
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="w-vl-item  text-center">
-                                <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/item_icon.png' ?>" class="icon-item_img" alt="">
-                                <h4 class="w-vl-h4-title">
-                                    giá trị 1
-                                </h4>
-                                <p class="w-vl-title-p">
-                                    Lorem ipsum dolor sit amet consectetur . Accusamus asperiores officiis facere aliquam iure, obcaecati totam aspernatur nesciunt quia?
-                                </p>
-                                <p class="w-vl-title-p">
-                                    Accusamus asperiores officiis facere aliquam iure, obcaecati totam aspernatur nesciunt quia?
-                                </p>
-                            </div>
-                            
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="w-vl-item  text-center">
-                                <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/item_icon.png' ?>" class="icon-item_img" alt="">
-                                <h4 class="w-vl-h4-title">
-                                    giá trị 1
-                                </h4>
-                                <p class="w-vl-title-p">
-                                    Lorem ipsum dolor sit amet consectetur . Accusamus asperiores officiis facere aliquam iure, obcaecati totam aspernatur nesciunt quia?
-                                </p>
-                                <p class="w-vl-title-p">
-                                    Accusamus asperiores officiis facere aliquam iure, obcaecati totam aspernatur nesciunt quia?
-                                </p>
-                            </div>
-                            
-                        </div>
+    <div class="container">
+        <?php if($title) : ?>
+        <p class="w-vl-p_title">
+            <?= $title ?>
+        </p>
+        <?php endif; ?>
+        <?php if($list) : ?>
+        <div class="w-vl-content-box" style="background-image: url('<?=  get_stylesheet_directory_uri() . '/assets/images/br_w_vl.png' ?>')" >
+            <div class="row">
+                <?php foreach($list as $item) : ?>
+                <div class="col-lg-4">
+                    <div class="w-vl-item active text-center">
+                        <?php if($item['image']) : ?>
+                            <img src="<?= esc_url( $item['image']['url']) ?>" class="icon-item_img" alt="">
+                        <?php endif; ?>
+                        <?php if($item['name']) : ?>
+                        <h4 class="w-vl-h4-title">
+                            <?= $item['name'] ?>
+                        </h4>
+                        <?php endif; ?>
+                        <?= ($item['content']) ? $item['content'] : '' ?>
                     </div>
                 </div>
-            
-          
-       
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <?php endif; ?>
     </div>
 </section>
 <?php 
