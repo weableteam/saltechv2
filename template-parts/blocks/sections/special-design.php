@@ -68,10 +68,12 @@ if( !empty($block['align']) ) {
                             <div class="investors">
                                 <h4><?= get_the_title( ) ?></h4>
                                 <p>Chủ đầu tư: <?= $name ?></p>
+                                <?php if(get_field('logo',$post_id)) : ?>
                                 <div class="logo">
                                     <img src="<?= esc_url(get_field('logo',$post_id)['url']) ?>" alt=""
                                         class="img-fluid">
                                 </div>
+                                <?php endif; ?>
                             </div>  
                             <?= get_field('desc',$post_id) ?>
                         </div>
@@ -168,7 +170,7 @@ if (!function_exists('specialDesignScripts'))   {
             infinity: true,
             slidesToShow: 2,
             rows: 2,
-            slidesToScroll: 2,
+            slidesToScroll: 1,
             arrows: true,
             prevArrow: '<button type="button" class="slick-prev slick-icon"><i class="bi bi-chevron-left"></i></button>',
             nextArrow: '<button type="button" class="slick-next slick-icon"><i class="bi bi-chevron-right"></i></button>',

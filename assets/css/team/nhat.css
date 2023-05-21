@@ -1,6 +1,6 @@
 /*Start .w-intro */
 .w-intro {
-  padding-top: 82px;
+  padding-top: 120px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -598,7 +598,7 @@
 .w-process .item-container::before {
   position: absolute;
   content: "";
-  background-image: url(../../images/Group\687\\(1\).webp);
+  background-image: url(../../images/Group6877.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1319,6 +1319,127 @@
   line-height: 23px;
   letter-spacing: 0.02em;
 }
+/* campaign */
+.w-ca {
+  padding: 4rem 0;
+  background-image: url("http://localhost:10041/wp-content/uploads/2023/05/image-3.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.w-ca .campaign-heading {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.625rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #01fea5;
+  padding: 0 12rem;
+}
+.w-ca .campaign-chose {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: rgba(0, 197, 185, 0.85);
+  margin-top: 3.75rem;
+}
+.w-ca .campaign-list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.w-ca .campaign-item-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 33px 0;
+}
+.w-ca .campaign-item {
+  max-width: 31.313rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0 1.25rem;
+  background: rgba(217, 217, 217, 0.15);
+  backdrop-filter: blur(9.5px);
+  border-radius: 10px;
+  padding: 18px 49px 18px 19px;
+  text-decoration: none;
+  position: relative;
+  z-index: 111;
+  transition: all 450ms ease;
+}
+.w-ca .campaign-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.w-ca .campaign-item:nth-child(even) h6 {
+  text-align: left;
+}
+
+.w-ca .campaign-text-title {
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 1.813rem;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  transition: all 450ms ease-in-out;
+  text-align: right;
+}
+
+.w-ca .campaign-text > p {
+  line-height: 1.313rem;
+  text-align: right;
+  letter-spacing: 0.02em;
+  color: #b6dce0;
+}
+
+.w-ca .campaign-item:nth-child(even) p {
+  text-align: left;
+}
+
+.w-ca .campaign-icon {
+  background: #6274f6;
+  border-radius: 5px;
+  padding: 1.188rem 0.688rem;
+}
+
+.w-ca .campaign-next {
+  background: #26ffb1;
+  border-radius: 5px;
+  padding: 2.563rem 0.688rem;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 450ms ease;
+  z-index: -99;
+  opacity: 0;
+}
+.w-ca .campaign-item:hover .campaign-next {
+  right: -4.563rem;
+  animation: textGo 0.5s linear;
+  opacity: 1;
+}
+.w-ca .campaign-item:hover {
+  background: #14313a;
+}
+@keyframes textGo {
+  from {
+    right: 0;
+  }
+  to {
+    right: -4.563rem;
+    z-index: -10;
+    opacity: 1;
+  }
+}
+.w-ca .campaign-item:hover h6 {
+  color: #26ffb1;
+}
 /* end about project */
 @media (max-width: 1023px) {
   .w-lh .item-left {
@@ -1351,6 +1472,20 @@
   .w-apj .about-name > span {
     width: 4.379rem;
     height: 4.379rem;
+  }
+  .w-ca .campaign-heading {
+    font-size: 1.5rem;
+
+    padding: 0 0rem;
+  }
+  .w-ca .campaign-item {
+    max-width: 21.313rem;
+  }
+  .w-ca .campaign-chose {
+    margin-top: 1.75rem;
+  }
+  .w-ca .campaign-next {
+    display: none;
   }
 }
 @media (max-width: 739px) {
@@ -1400,5 +1535,10 @@
   }
   .w-ms .mision-people-img:nth-child(5) {
     top: 60%;
+  .w-ca .campaign-image {
+    display: none;
+  }
+  .w-ca .campaign-item-wrapper {
+    position: static;
   }
 }

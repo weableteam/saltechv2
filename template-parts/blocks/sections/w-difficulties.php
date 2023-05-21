@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'w-diff py-4';
+$className = 'w-diff pt-4';
 
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
@@ -43,12 +43,12 @@ $image = get_field('image');
         </div>
         <?php endif; ?>
         <?php if($image) : ?>
-        <div class="diff-main">
+        <div class="diff-main scroll"  onmousedown="startDragging(event)" onmousemove="dragScroll(event)" onmouseup="stopDragging(event)">
             <div class="diff-note">
                 <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/dif-note.webp' ?>" alt="">
             </div>
 
-            <div class="scroll " onmousedown="startDragging(event)" onmousemove="dragScroll(event)" onmouseup="stopDragging(event)">
+            <div >
                 <div class="item">
                     <img src="<?=  esc_url($image['url']) ?>" alt="">
                 </div>

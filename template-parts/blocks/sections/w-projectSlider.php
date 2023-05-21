@@ -38,7 +38,7 @@ if( !empty($block['align']) ) {
             
     <div class="container">
         <div class="slider-head">
-                <h3>các dự án nổi bậc</h3>
+                <h3>các dự án nổi bật</h3>
                 <a href="">
                     <button>Tất cả dự án</button>
                 </a>

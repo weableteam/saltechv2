@@ -42,7 +42,7 @@ $list = get_field('list');
                 <?= ($subtitle) ? '<p>'.$subtitle.'</p>' : '' ?>
                 <?= ($title) ? '<h3>'.$title.'</h3>' : '' ?>
             </div>
-            <a href="/full-project" class="seeall">Xem tất cả</a>
+            <a href="/full-project/#w-block-block_b2b6a142065c6686f87e1dccda075d20" class="seeall">Xem tất cả</a>
         </div>
         <?php if($list) : ?>
         <div class="row align-items-center">

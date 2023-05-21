@@ -26,7 +26,7 @@
 }
 
 .w-post {
-    padding-top: 6.25rem;
+    padding-top: 0;
     position: relative;
 }
 
@@ -165,7 +165,7 @@
 .w-post .contentSlide .slick-prev,
 .w-post .contentSlide .slick-next {
     font-size: 1.3rem;
-    top: 114.7%;
+    top: 116%;
     z-index: 999;
 }
 
@@ -299,7 +299,7 @@
 
 /* CSS w-testimonalSlider */
 .w-testimonalSlider {
-    padding: 6.25rem 0;
+    padding: 2.25rem 0;
 }
 
 .w-testimonalSlider .title {

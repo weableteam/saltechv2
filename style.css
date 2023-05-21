@@ -26,6 +26,13 @@ Text Domain: weable
 	font-style: normal;
 	font-display: swap;
 }
+@font-face {
+	font-family: 'Red';
+	src: url('assets/fonts/RedRose-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
 
 @font-face {
 	font-family: 'Krub';
@@ -1245,6 +1252,7 @@ html {
 .w-quote .title h2 {
 	color: #01FEA5;
 	font-weight: 400 !important;
+	font-family: "Red",sans-serif;
 }
 
 .w-quote .logo img {
@@ -1327,7 +1335,7 @@ html {
 	bottom: 0;
 	left: 50%;
 	transform: translate(-50%, 50%);
-	width: 80%;
+	width: 85%;
 	height: 80%;
 	background-image: url("assets/images/Group576.webp");
 	background-position: center;
@@ -1417,7 +1425,7 @@ html {
 /* css w-pageHeaderv2 */
 
 .w-pageHeaderv2 {
-	padding-top: 82px !important;
+	padding-top: 130px !important;
 }
 .w-pageHeaderv2 video {
 	position: absolute;
@@ -2063,7 +2071,7 @@ html {
 	background-position: top center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 50vh;
+	height: 40vh;
 	display: flex;
 	align-items: center;
 }
@@ -2394,7 +2402,6 @@ html {
 	padding-bottom: 1rem;
 	border-bottom: 1px solid #000000;
 	margin-bottom: 1rem;
-	width: max-content;
 }
 .pageHiring .contentSlideHiring ul li:last-child{
 	border-bottom: unset !important;
@@ -2403,8 +2410,8 @@ html {
 	margin-right: 2.5rem;
 }
 .pageHiring .contentSlideHiring ul .icon img{
-	width: 33px;
-	height: 33px;
+	min-width: 33px;
+	min-height: 33px;
 }
 .pageHiring .contentSlideHiring ul p{
 	margin: 0;
@@ -2969,7 +2976,8 @@ html {
 .w-feedback .slick-prev,
 .w-feedback .slick-next{
 	display: block;
-	top: 121%;
+	top: 50%;
+	transform: translateY(-50%);
 	z-index: 999;
 	font-size: .8rem;
 	border: 1px solid #14313A;
@@ -3083,6 +3091,7 @@ html {
 
 	.w-feedback .slick-number{
 		margin: 2.3rem 0;
+		position: relative;
 	}
 
 	.w-feedback .feedback-slick .slick-items{
@@ -5020,17 +5029,7 @@ width: 60%;
 	position: relative;
 	background: #181818;
 }
-.w-timeline .slideTimeLine::after{
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	display: block;
-	background: #181818;
-    z-index: 3;
-	width: 4.2444%;
-}
+
 .w-timeline .slideTimeLine::before{
 	position: absolute;
     width: 100%;
@@ -5789,7 +5788,6 @@ line-height: 1;
 	padding-right: 0;
 	padding-left: 0;
 	/* margin-right: 2.5rem; */
-	overflow: hidden;
 	height: 25rem;
 	margin-right: 0;
 	width: 120%;
@@ -6299,6 +6297,7 @@ line-height: 1;
 .w-listItem .listItem-main .listItem-left .flex-column .nav-name{
 	color: #FFFFFF;
     opacity: 0.5;
+	font-size: 1.1rem;
 	cursor: pointer;
 	font-weight: 600;
 }
@@ -6360,12 +6359,12 @@ line-height: 1;
 }
 
 .w-listItem .listItem-main .tab-content .tab-pane .listitems .listItem-items .items-title .title-name{
-    font-size: 1.25rem;
+    font-size: 1.7rem;
 }
 
 .w-listItem .listItem-main .tab-content .tab-pane .listitems .listItem-items .items-title .title-span{
 	width: 70%;
-    font-size: .8rem;
+    font-size: 1rem;
     opacity: 0.75;
 }
 
@@ -6483,7 +6482,7 @@ line-height: 1;
 
 /* PAGECONTACT */
 .pageContact{
-	padding-top: 82px !important;
+	padding-top: 120px !important;
 	background-image: url(assets/images/contact-bg.webp);
 	padding: 5rem 10rem;
 	display: flex;
@@ -7726,7 +7725,7 @@ line-height: 1;
 	object-fit: cover;
 }
 .w-timeline .slideTimeLine .slick-prev{
-    left: 81%;
+    left: 82.2%;
 }
 .w-timeline .slideTimeLine .slick-next{
 	right: 10%;
@@ -8174,4 +8173,47 @@ img{
 }
 .items-projectDone .draggable{
 	margin: 0 -1rem;
+}
+
+
+.w-wwc{
+	padding-bottom: 9rem ;
+}
+
+.boxService-foot{
+	padding-top: 4rem;
+}
+
+.slideTimeLine .slick-list{
+	overflow: unset;
+}
+
+/* button */
+.w-member .slick-prev::before,
+.w-member .slick-next::before {
+    display: none;
+}
+.w-member .slick-prev,
+.w-member .slick-next{
+	width: 55px;
+	height: 55px;
+	z-index: 9999 ;
+	top: -15%;
+	object-fit: cover;
+}
+.w-member .slick-prev{
+    left: 69%;
+}
+.w-member .slick-next{
+	right: 24%;
+}
+.w-member button:hover img{
+	display: none !important;
+}
+.w-member button:hover .imgNext, .w-member button:hover .imgPrev{
+	display: block !important;
+}
+
+.w-listItem *{
+	font-family: 'Dark',sans-serif !important;
 }

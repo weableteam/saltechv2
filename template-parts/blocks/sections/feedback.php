@@ -65,7 +65,9 @@ $list = get_field('list');
                 <?php endforeach; ?>
             </div>
             <div class="slick-number" style="display: block;">
-                <span class="active">01</span> / <span class="total"></span>
+                <button type="button" class="slick-prev "><i class="bi bi-chevron-left"></i></button>
+                    <span class="active">01</span> / <span class="total"></span>
+                <button type="button" class="slick-next "><i class="bi bi-chevron-right"></i> </button>
             </div>
         </div>
         <?php endif; ?>
@@ -93,10 +95,8 @@ if (!function_exists('feedbackScripts'))   {
                     slidesToShow: 1,
                     // autoplay: true,
                     speed: 300,
-                    prevArrow:
-                        '<button type="button" class="slick-prev "><i class="bi bi-chevron-left"></i></button>',
-                    nextArrow:
-                        '<button type="button" class="slick-next "><i class="bi bi-chevron-right"></i> </button>',
+                    prevArrow: $('.slick-prev'),
+                    nextArrow: $('.slick-next'),
                     responsive: [
                         {
                             breakpoint: 992,

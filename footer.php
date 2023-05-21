@@ -12,13 +12,13 @@
 				endif;
 			?>
 		</main><!-- /#main -->
-		<footer id="footer">
+		<footer id="footer" class="<?= (is_page_template('page-branding.php')) ? 'd-none' : '' ?>">
 			<section class="align-full w-footer py-4 ">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-2">
 							<div class="logo text-lg-left text-center">
-								<img src="http://localhost:10017/wp-content/uploads/2023/03/logo-2.webp" alt="">
+								<img src="https://saltech.webmau.net/wp-content/uploads/2023/05/logo-2.webp" alt="">
 							</div>
 						</div>
 						<div class="col-lg-3 col-6">
