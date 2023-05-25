@@ -85,82 +85,43 @@ $packets = get_field('packets');
     </div>
 </section>
 	<!-- popup packageService -->
-    <!-- <?php foreach($packets as $key=>$item) : ?>
-        <div class="modal packet fade" id="Modal<?= $key ?>" tabindex="-1" role="dialog" aria-labelledby="<?= $key ?>ModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="myDiv" id="myDiv">
-                            <div class="bg-div container">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/logo 1.webp' ?>" alt="">
-                                <div class="mydiv-bor">
-                                    <form action="">
-                                        <div class="form-group text-left">
-                                            <label for="inputPhone">Số điện thoại</label>
-                                            <input type="text" class="form-control" id="inputPhone">
-                                        </div>
-                                        <div class="form-group text-left">
-                                            <label for="inputEmail">Email</label>
-                                            <input type="email" class="form-control" id="inputEmail" >
-                                        </div>
-                                        <div class="form-group text-left">
-                                            <label for="input3">Ngành hàng</label>
-                                            <input type="text" class="form-control" id="input3">
-                                        </div>
-                                        <div class="form-group text-left">
-                                            <label for="textarea">Lời nhắn</label>
-                                            <textarea class="form-control" id="textarea" rows="3"></textarea>
-                                        </div>
-                                        <button type="submit" class="btn">Submit</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <?php endforeach; ?> -->
     <div class="modal packet fade show" id="Modal0" tabindex="-1" aria-labelledby="0ModalLabel" aria-modal="true" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="myDiv" id="myDiv">
-                            <div class="bg-div container">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                                <img decoding="async" src="http://saltech.local/wp-content/themes/weable/assets/images/logo 1.webp" alt="">
-                                <div class="mydiv-bor">
-                                    <form action="">
-                                        <div class="form-group text-left">
-                                            <label for="inputPhone">Số điện thoại</label>
-                                            <input type="text" class="form-control" id="inputPhone">
-                                        </div>
-                                        <div class="form-group text-left">
-                                            <label for="inputEmail">Email</label>
-                                            <input type="email" class="form-control" id="inputEmail">
-                                        </div>
-                                        <div class="form-group text-left">
-                                            <label for="input3">Ngành hàng</label>
-                                            <input type="text" class="form-control" id="input3">
-                                        </div>
-                                        <div class="form-group text-left">
-                                            <label for="textarea">Lời nhắn</label>
-                                            <textarea class="form-control" id="textarea" rows="3"></textarea>
-                                        </div>
-                                        <button type="submit" class="btn">Submit</button>
-                                    </form>
-                                </div>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="myDiv" id="myDiv">
+                        <div class="bg-div container">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <img decoding="async" src="http://saltech.local/wp-content/themes/weable/assets/images/logo 1.webp" alt="">
+                            <div class="mydiv-bor">
+                                <form action="">
+                                    <div class="form-group text-left">
+                                        <label for="inputPhone">Số điện thoại</label>
+                                        <input type="text" class="form-control" id="inputPhone">
+                                    </div>
+                                    <div class="form-group text-left">
+                                        <label for="inputEmail">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail">
+                                    </div>
+                                    <div class="form-group text-left">
+                                        <label for="input3">Ngành hàng</label>
+                                        <input type="text" class="form-control" id="input3">
+                                    </div>
+                                    <div class="form-group text-left">
+                                        <label for="textarea">Lời nhắn</label>
+                                        <textarea class="form-control" id="textarea" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn">Submit</button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 <?php 
 add_action( 'wp_footer', 'packetServiceScripts', 99, 1 );
 if (!function_exists('packetServiceScripts'))   {
