@@ -106,7 +106,7 @@ if (!function_exists('sliderScripts'))   {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 3000,
+        speed: 1000,
         dots: true,
         arrows: true,
         prevArrow: '<button type="button" class="slick-prev"><img src="<?= get_stylesheet_directory_uri() . '/assets/images/Group 620.webp' ?>" alt=""><img src="<?= get_stylesheet_directory_uri() . '/assets/images/Group 619.webp' ?>" alt=""></button>',

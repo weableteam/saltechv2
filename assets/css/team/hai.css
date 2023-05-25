@@ -375,7 +375,15 @@ img {
     display: block;
     color: #064666;
     transition: all .3s ease;
-    padding-top: 4.7rem;
+    padding-top: 1.5rem;
+    font-size: 1.375rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 5;
+    height: 185px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    width: 100%;
 }
 
 .w-wwc .items:hover span {

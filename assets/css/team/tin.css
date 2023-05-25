@@ -329,7 +329,7 @@
 }
 
 .w-packageService .package-list {
-  width: 25%;
+  width: 100%;
   transition: all 0.5s;
   position: relative;
 }
@@ -647,9 +647,9 @@
   }
 
   .w-packageService .package-content .package-list .pack-top h5 {
-    padding: 0.5rem;
+    padding: 1.5rem 0.5rem 0.5rem;
     font-size: 1rem;
-    height: 2rem;
+    height: 3.5rem;
     text-align: center;
   }
 
@@ -659,11 +659,11 @@
   }
 
   .w-packageService .package-content .package-list .pack-bot ul {
-    height: 15rem;
+    height: 21rem;
   }
 
   .w-packageService .package-content .package-list .pack-bot ul li {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     width: 90%;
     padding-top: 1rem;
   }
@@ -694,9 +694,6 @@
     border-radius: 58px;
   }
 
-  .w-packageService .package-content .package-list button span {
-    font-size: 0.7rem;
-  }
 
   .w-packageService .package-content .package-list button .pack-bt1 {
     padding: 0px 10px;
@@ -752,6 +749,9 @@
   #myDiv4 ul li img {
     width: 8%;
   }
+  .w-packageService .package-content .package-list .pack-bot .pack-price{
+    margin-bottom: 1rem;
+  }
 }
 
 @media (max-width: 541px) {
@@ -760,23 +760,23 @@
   }
 
   .w-packageService .package-content .package-list .pack-top h5 {
-    padding: 0.5rem;
-    font-size: 0.9rem;
-    height: 2.8rem;
-    text-align: initial;
-    padding: 1rem 1.5rem;
+    height: 4rem;
+    padding: 2.5rem 0rem 2rem;
   }
 
   .w-packageService .package-content .package-list .pack-top .pack-img {
-    width: 24%;
-    top: 1%;
-    left: 70%;
+    width: 25%;
+    top: -7%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .w-packageService .package-content .package-list .pack-bot .pack-price {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding: 1rem 0;
+    width: 90%;
   }
 
   .w-packageService
@@ -798,13 +798,13 @@
   }
 
   .w-packageService .package-content .package-list .pack-bot ul {
-    height: 14rem;
+    height: unset;
+    margin-bottom: 1rem;
   }
 
   .w-packageService .package-content .package-list .pack-bot ul li {
-    font-size: 0.6rem;
+    font-size: 0.85rem;
     width: 90%;
-    height: 2rem;
     padding-top: 1rem;
     overflow: hidden;
   }
@@ -837,17 +837,14 @@
   .w-packageService .package-content .package-list button {
     margin: auto;
     padding: 1rem;
-    width: 90%;
-    /* flex-direction: f; */
+    width: 60%;
     border-radius: 5px;
-    width: 10rem;
     height: 3rem;
-    display: flex;
   }
 
   .w-packageService .package-content .package-list {
-    width: calc(50% - 5px);
-    margin-bottom: 5px;
+    width:100%;
+    margin-bottom: 3rem;
   }
 
   .w-packageService .package-content .package-list .pack-top {
