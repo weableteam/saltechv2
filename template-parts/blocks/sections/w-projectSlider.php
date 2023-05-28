@@ -72,14 +72,14 @@ if( !empty($block['align']) ) {
                             <img src="<?= the_post_thumbnail_url(  ) ?>" alt="">
                         </div>
                         <div class="sl-inf">
+                            <div class="sl-hover">
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
                             <div class="sl-title">
                                 <h4> <?= get_the_title( ) ?></h4>
                                 <span><?= get_the_excerpt( ) ?></span>
                             </div>
 
-                            <div class="sl-hover">
-                                <i class="bi bi-arrow-right"></i>
-                            </div>
                         </div>
                     </div>
                 </a>

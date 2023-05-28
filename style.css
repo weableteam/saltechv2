@@ -834,6 +834,7 @@ html {
 	background: rgba(13, 39, 47, 0.25);
 	backdrop-filter: blur(12px);
 	transition: all .3s;
+	overflow: hidden;
 }
 
 .w-pSlider .slider-ct a .slider-items .sl-inf {
@@ -851,16 +852,16 @@ html {
     position: relative;
     width: 8rem;
     height: 6rem;
-    left: 0%;
+    left: -100%;
     /* margin-top: 2rem; */
-    transition: all 1s;
+    transition: all .7s;
     opacity: 0;
 	padding: 2rem;
 }
 
 .w-pSlider .slider-ct a .slider-items:hover .sl-inf .sl-hover {
 	opacity: 1;
-	left: -84%;
+	left: 5%;
 }
 
 .w-pSlider .slider-ct a .slider-items .sl-inf .sl-hover i {
@@ -879,11 +880,12 @@ html {
 
 .w-pSlider .slider-ct a .slider-items .sl-inf .sl-title {
 	transition: all 1s;
+	position: relative;
+	left: -4%;
 }
 
 .w-pSlider .slider-ct a .slider-items:hover .sl-inf .sl-title {
-	position: relative;
-	left: 32%;
+	left: 12%;
 }
 
 .w-pSlider .slider-ct a .slider-items .sl-inf .sl-title h4 {
@@ -930,7 +932,7 @@ html {
 	display: block;
 	top: 113.5%;
 	z-index: 999;
-	font-size: .8rem;
+	font-size: .9rem;
 	border: 1px solid #ffff;
 	color: #ffff;
 	border-radius: 50%;
@@ -1232,19 +1234,19 @@ html {
 /* w-quote */
 .w-quote {
 	background-color: rgba(4, 28, 35, 1);
-	padding-bottom: 10rem;
+	padding-bottom: 7rem;
 }
 
 .w-quote .title {
 	text-align: center;
-	max-width: 60%;
+	max-width: 80%;
 	margin: 0 auto;
 	margin-bottom: 2rem;
 }
 
 .w-quote .title p {
-	max-width: 70%;
-	margin: 1rem auto;
+	max-width: 48%;
+	margin: 1rem auto 3.5rem;
 	color: #B6DCE0;
 	opacity: 0.75;
 }
@@ -1297,7 +1299,6 @@ html {
 @media screen and (max-width: 541px) {
 	.w-quote .title p {
 		max-width: 100%;
-		margin: auto;
 		font-size: .9rem;
 	}
 
@@ -2928,6 +2929,7 @@ html {
 }
 .w-feedback .feedback-slick .slick-items.slick-active{
 	opacity: 1;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .w-feedback .feedback-slick .slick-items.slick-active::after{
 
@@ -2979,7 +2981,7 @@ html {
 	top: 50%;
 	transform: translateY(-50%);
 	z-index: 999;
-	font-size: .8rem;
+	font-size: .9rem;
 	border: 1px solid #14313A;
     color: #14313A;
 	border-radius: 50%;
@@ -9049,3 +9051,4 @@ img{
 .w-allpj .w-listItem  .slick-prev {
     margin-right: 1.3rem;
 }
+/* fixx css */
