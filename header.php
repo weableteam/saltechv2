@@ -31,7 +31,7 @@
 						if ( ! empty( $header_logo ) ) :
 					?>
 						
-						<img src="<?= (is_page_template('page-ads.php')) ? 'https://saltech.webmau.net/wp-content/uploads/2023/05/Group-1.webp' : esc_url( $header_logo ) ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
+						<img src="<?= (is_page_template('page-ads.php')) ? esc_url( $header_logo ) : esc_url( $header_logo ) ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 					<?php
 						else :
 							echo esc_attr( get_bloginfo( 'name', 'display' ) );
