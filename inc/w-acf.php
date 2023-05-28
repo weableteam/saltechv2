@@ -798,6 +798,36 @@ function tpa_acf_init_block_types() {
             'align'             => 'full',
             'keywords'          => array( '[W-Section] Page Header Image', 'acf' ),
         ));
+
+         /** 
+         * [W-Section] Activity
+         */
+        acf_register_block_type(array(
+            'name'              => 'activity',
+            'title'             => __(' [W-Section] Activity'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/activity.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] Activity', 'acf' ),
+        ));
+
+         /** 
+         * [W-Section] All Project
+         */
+        acf_register_block_type(array(
+            'name'              => 'w-allproject',
+            'title'             => __(' [W-Section] All Project'),
+            'description'       => __('Show dự án'),
+            'render_template'   => 'template-parts/blocks/sections/w-allproject.php',
+            'category'          => 'formatting',
+            'icon'              => 'block-default',
+            'mode'              => 'edit',
+            'align'             => 'full',
+            'keywords'          => array( '[W-Section] All Project', 'acf' ),
+        ));
     }
 
     

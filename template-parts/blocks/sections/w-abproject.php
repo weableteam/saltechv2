@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'w-apj pt-5';
+$className = 'w-apj pt-5 pb-5';
 
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
@@ -30,6 +30,7 @@ if( !empty($block['align']) ) {
 
 // Load values and assign defaults.
 $title = get_field('title');
+$tabs = get_field('tabs');
 $list = get_field('list');
 
 ?>
@@ -44,52 +45,52 @@ $list = get_field('list');
             </div>
             <?php endif; ?>
             <?php if($list) : ?>
-            <div class="about-slider">
-                <?php foreach($list as $item) : ?>
-                    <?php if($item['project']) :
-                       $project = $item['project'];
-                       setup_postdata($project);
-                       $project_id = $project->ID; // Lấy ID của bài viết
-                       ?>
-                        <a href="#" class="link-prj about-item" project-id="<?= $project_id ?>">
-                            <div class="img-wrap">
-                                <?php echo get_the_post_thumbnail($project) ?>
-                            </div>    
-                            <div class="about-name">
-                                <span ><img src="../wp-content/uploads/2023/05/Group-903.webp" alt=""></span>
-                                <div class="about-name-wrapper">
-                                    <h4><?= get_the_title($project  ) ?></h4>
-                                    <p>
-                                    <?php
-                                    // Lấy danh sách thuộc tính taxonomy
-                                    $taxonomies = get_the_terms($project, 'linh-vuc-du-an');
+                <div class="about-slider">
+                    <?php foreach($list as $item) : ?>
+                        <?php if($item['project']) :
+                        $project = $item['project'];
+                        setup_postdata($project);
+                        $project_id = $project->ID; // Lấy ID của bài viết
+                        ?>
+                            <a href="#" class="link-prj about-item" project-id="<?= $project_id ?>">
+                                <div class="img-wrap">
+                                    <?php echo get_the_post_thumbnail($project) ?>
+                                </div>    
+                                <div class="about-name">
+                                    <span ><img src="../wp-content/uploads/2023/05/Group-903.webp" alt=""></span>
+                                    <div class="about-name-wrapper">
+                                        <h4><?= get_the_title($project  ) ?></h4>
+                                        <p>
+                                        <?php
+                                        // Lấy danh sách thuộc tính taxonomy
+                                        $taxonomies = get_the_terms($project, 'linh-vuc-du-an');
 
-                                    if ($taxonomies && !is_wp_error($taxonomies)) {
-                                        $taxonomy_parent = '';
-                                        foreach ($taxonomies as $taxonomy) {
-                                            if ($taxonomy->parent == 0) {
-                                                $taxonomy_parent = $taxonomy->name;
-                                                break;
+                                        if ($taxonomies && !is_wp_error($taxonomies)) {
+                                            $taxonomy_parent = '';
+                                            foreach ($taxonomies as $taxonomy) {
+                                                if ($taxonomy->parent == 0) {
+                                                    $taxonomy_parent = $taxonomy->name;
+                                                    break;
+                                                }
                                             }
+                                            echo $taxonomy_parent;
                                         }
-                                        echo $taxonomy_parent;
-                                    }
-                                    ?>
-                                    </p>
+                                        ?>
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                        <?php wp_reset_postdata( ); ?>
-                    <?php endif; ?>
-                <?php endforeach; ?>
-            </div>
+                            </a>
+                            <?php wp_reset_postdata( ); ?>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
             <?php endif; ?>
             <div class="about-slider--counter">1/4</div>
         </div>
     </div>
 </section>
 <?php 
-//add_action( 'wp_footer', 'apjScripts', 99, 1 );
+add_action( 'wp_footer', 'apjScripts', 99, 1 );
 if (!function_exists('apjScripts')) {
     function apjScripts()
     { ?>

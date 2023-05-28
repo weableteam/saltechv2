@@ -65,6 +65,7 @@
   ul
   .text-right_list {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 

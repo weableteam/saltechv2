@@ -1,0 +1,247 @@
+{
+    "key": "group_6471cd4332406",
+    "title": "[W-Section] All Project",
+    "fields": [
+        {
+            "key": "field_6471cd43f5a1c",
+            "label": "[W-Section] All Project",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_6471cde63c32b",
+            "label": "Thiết kế website",
+            "name": "design",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6471ce993c32d",
+                    "label": "Projects",
+                    "name": "projects",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_6471cead3c32e",
+                            "label": "Project",
+                            "name": "project",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "du-an"
+                            ],
+                            "taxonomy": [
+                                "linh-vuc-du-an:website"
+                            ],
+                            "return_format": "object",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 1,
+                            "parent_repeater": "field_6471ce993c32d"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_6471ced9a25db",
+            "label": "Google Ads",
+            "name": "google",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6471ced9a25dc",
+                    "label": "Projects",
+                    "name": "projects",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_6471ced9a25dd",
+                            "label": "Project",
+                            "name": "project",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "du-an"
+                            ],
+                            "taxonomy": [
+                                "linh-vuc-du-an:sem"
+                            ],
+                            "return_format": "object",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 1,
+                            "parent_repeater": "field_6471ced9a25dc"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_6471ceec96688",
+            "label": "Thương hiệu",
+            "name": "branch",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6471ceec96689",
+                    "label": "Projects",
+                    "name": "projects",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_6471ceec9668a",
+                            "label": "Project",
+                            "name": "project",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "du-an"
+                            ],
+                            "taxonomy": [
+                                "linh-vuc-du-an:branding"
+                            ],
+                            "return_format": "object",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "ui": 1,
+                            "parent_repeater": "field_6471ceec96689"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/w-allproject"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1685181032
+}

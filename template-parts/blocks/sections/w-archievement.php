@@ -40,7 +40,7 @@ $archives = get_field('archives');
         <?php if($archives) : ?>
        <div class="row">
             <?php foreach($archives as $item) : ?>
-            <div class="col-4">
+            <div class="col-lg-3 col-6">
                 <div class="archi-list">
                     <?php if($item['top']) : ?>
                     <div class="archi-list_content">
