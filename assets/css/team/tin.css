@@ -640,6 +640,17 @@
   cursor: pointer;
 }
 
+#myDiv .mydiv-bor form label{
+  color: #000;
+  text-align: left !important;
+}
+
+#myDiv .mydiv-bor form button{
+  background: #0d3440;
+  color: #fff;
+  padding: 0.675rem 2.05rem;
+}
+
 /* popup */
 
 @media (max-width: 992px) {
@@ -1543,7 +1554,7 @@
   padding: 3rem;
   text-align: center;
   color: #FFFFFF;
-  min-height: 14rem;
+  min-height: 12rem;
   display: flex;
   align-items: center;
   font-size: 1.2rem;
