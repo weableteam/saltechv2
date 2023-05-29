@@ -839,9 +839,8 @@ html {
 
 .w-pSlider .slider-ct a .slider-items .sl-inf {
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
-	margin: 1rem 0;
+	margin: 1.5rem 0;
 }
 
 .w-pSlider .slider-ct a .slider-items .sl-inf .sl-hover {
@@ -850,7 +849,7 @@ html {
     transform: rotate(-134.23deg);
     transition: all 0.3s;
     position: relative;
-    width: 8rem;
+    width: 3rem;
     height: 6rem;
     left: -100%;
     /* margin-top: 2rem; */
@@ -881,11 +880,11 @@ html {
 .w-pSlider .slider-ct a .slider-items .sl-inf .sl-title {
 	transition: all 1s;
 	position: relative;
-	left: -4%;
+	left: 5%;
 }
 
 .w-pSlider .slider-ct a .slider-items:hover .sl-inf .sl-title {
-	left: 12%;
+	left: 20%;
 }
 
 .w-pSlider .slider-ct a .slider-items .sl-inf .sl-title h4 {
@@ -8796,12 +8795,12 @@ img{
 	margin: 0 -1rem;
 }
 
-.w-allpj .w-pSlider .slider-ct a .slider-items:hover .sl-inf .sl-title{
+/* .w-allpj .w-pSlider .slider-ct a .slider-items:hover .sl-inf .sl-title{
 	left: unset;
-}
+} */
 
 .w-allpj .w-pSlider .slider-ct a .slider-items .sl-inf .sl-hover{
-	position: static;
+	position: absolute;
 	width: unset;
 }
 .w-allpj .nav-tabs{
