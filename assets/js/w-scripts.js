@@ -257,5 +257,12 @@ appHeight();
       counter.text(currentSlide + 1 + "/" + slick.slideCount);
     }
   );
+
+  $('.dropdown-menu a.dropdown-item').click(function(e) {
+    e.stopPropagation();
+  });
+  $('.dropdown-menu .menu-item-has-children .dropdown-item').click(function(e){
+    $(this).next('.dropdown-menu').toggleClass('show')
+   })
     })(jQuery);
 

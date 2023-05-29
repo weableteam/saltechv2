@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'w-specialDesign py-5';
+$className = 'w-specialDesign py-5 w-pSlider';
 
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
@@ -88,7 +88,7 @@ if( !empty($block['align']) ) {
               wp_reset_postdata();?>
         </ul>
         <ul class="list-projectDone">
-            <li class="items-projectDone">
+            <li class="slider-ct">
             <?php 
             $args = array(
                 'post_type' => 'du-an',
@@ -108,17 +108,20 @@ if( !empty($block['align']) ) {
               if ($query->have_posts()) {
                 while ($query->have_posts()) {
                   $query->the_post();?>
-                <a href="#"  class="bgr  link-prj" project-id="<?= the_ID() ?>">
-                    <div class="images img-wrap">
-                        <img src="<?= the_post_thumbnail_url(  ) ?>" alt="">
-                    </div>
-                    <div class="project">
-                        <div class="content">
-                            <h4> <?= get_the_title( ) ?></h4>
-                            <span><?= get_the_excerpt( ) ?></span>
+                 <a href="#" class="link-prj" project-id="<?= the_ID() ?>">
+                    <div class="slider-items">
+                        <div class="sl-img img-wrap">
+                            <img src="<?= the_post_thumbnail_url(  ) ?>" alt="">
                         </div>
-                        <div class="icon">
-                            <i class="bi bi-arrow-right"></i>
+                        <div class="sl-inf">
+                            <div class="sl-hover">
+                                <i class="bi bi-arrow-right"></i>
+                            </div>
+                            <div class="sl-title">
+                                <h4> <?= get_the_title( ) ?></h4>
+                                <span><?= get_the_excerpt( ) ?></span>
+                            </div>
+
                         </div>
                     </div>
                 </a>
@@ -169,13 +172,62 @@ if (!function_exists('specialDesignScripts'))   {
         $slider.slick({
             infinity: true,
             slidesToShow: 2,
-            rows: 2,
             slidesToScroll: 1,
             arrows: true,
             prevArrow: '<button type="button" class="slick-prev slick-icon"><i class="bi bi-chevron-left"></i></button>',
             nextArrow: '<button type="button" class="slick-next slick-icon"><i class="bi bi-chevron-right"></i></button>',
         });
     }
+
+    var helpers = {
+        addZeros: function (n) {
+            return (n < 10) ? '0' + n : '' + n;
+            }
+        };
+    
+        function sliderInit() {
+        var $slider = $('w-specialDesign.w-pSlider .slider-ct');
+        $slider.each(function() {
+            var $sliderParent = $(this).parent();
+            $(this).slick({
+                slidesToShow: 3,
+                // autoplay: true,
+                speed: 300,
+                prevArrow: $('w-specialDesign.w-pSlider .slick-prev'),
+                    nextArrow: $('w-specialDesign.w-pSlider  .slick-next'),
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '0px',
+                            slidesToShow: 3
+                            }
+                    },
+                    {
+                        breakpoint: 541,
+                        settings: {
+                            arrows: true,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ],        
+            });
+            if ($(this).find('.slider-items').length > 1) {
+            $(this).siblings('.slick-number').show();
+            }
+            $(this).on('afterChange', function(event, slick, currentSlide){
+            $sliderParent.find('.slick-number .active').html(helpers.addZeros(currentSlide + 1));
+            });
+            var sliderItemsNum = $(this).find('.slick-slide').not('.slick-cloned').length;
+            $sliderParent.find('.slick-number .total').html(helpers.addZeros(sliderItemsNum));
+            });
+        };
+        sliderInit();
+
 }(jQuery));
 </script>
 <?php }

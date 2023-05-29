@@ -43,17 +43,19 @@ $image = get_field('image');
         </div>
         <?php endif; ?>
         <?php if($image) : ?>
-        <div class="diff-main scroll"  onmousedown="startDragging(event)" onmousemove="dragScroll(event)" onmouseup="stopDragging(event)">
-            <div class="diff-note">
-                <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/dif-note.webp' ?>" alt="">
-            </div>
-
-            <div >
-                <div class="item">
-                    <img src="<?=  esc_url($image['url']) ?>" alt="">
+        <div class="wrapp">
+            <div class="diff-main scroll"  onmousedown="startDragging(event)" onmousemove="dragScroll(event)" onmouseup="stopDragging(event)">
+                <div class="diff-note">
+                    <img src="<?=  get_stylesheet_directory_uri() . '/assets/images/dif-note.webp' ?>" alt="">
+                </div>
+    
+                <div >
+                    <div class="item">
+                        <img src="<?=  esc_url($image['url']) ?>" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
+        </div >
         <?php endif; ?>
     </div>
 </section>
