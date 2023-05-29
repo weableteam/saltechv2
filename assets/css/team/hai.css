@@ -781,11 +781,23 @@ img {
     justify-content: space-evenly;
     align-items: center;
     padding: 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(35px);
-    /* padding: 4rem 0 1rem; */
     margin: -9rem 0 0;
     padding-bottom: 2rem;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.w-memberSlider .list-info::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    right: 50px;
+    bottom: 0;
+    backdrop-filter: blur(35px);
+    z-index: -1;
 }
 
 .w-memberSlider .list-info .items-info {
