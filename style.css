@@ -3969,7 +3969,7 @@ html {
 }
 @media (min-width: 576px){
 .modal-sm {
-    max-width: 100% !important;
+    max-width: 80% !important;
 	margin-bottom: 0 !important;
 }
 }
@@ -4115,7 +4115,6 @@ html {
 	width: 100%;
     margin: 0 auto;
 	background: #000000;
-	margin-top: -9rem;
     z-index: 9999;
     position: relative;
 }
@@ -9065,4 +9064,14 @@ img{
 	left: 106% !important;
     transform: unset;
     top: -1.7rem;
+}
+
+
+.pj .close{
+	position: absolute;
+	right: -2rem;
+	top: 1rem;
+	color: black;
+	font-size: 2rem;
+	z-index: 9999;
 }

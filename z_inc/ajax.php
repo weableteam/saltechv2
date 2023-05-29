@@ -108,7 +108,7 @@ function z_do_ajax(){
 
                 $result = '
                 <div class="pageShowProject-bg  p-0">
-                        <div class="container">
+                        <div class="">
                             <div class="pageShowProject">
                                 <div class="show-video">
                                     <div class="show-video_link">

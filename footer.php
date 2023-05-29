@@ -105,6 +105,9 @@
         <button class="toTop"><i class="bi bi-arrow-up-short"></i></button>
         <div class="modal pj fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-sm">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
                 <div class="modal-content">
                     <div class="pageShowProject-bg  p-0">
                         <div class="container">

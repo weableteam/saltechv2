@@ -43,7 +43,7 @@ $packets = get_field('packets');
         <?php if($packets) : ?>
         <div class="package-content">
             <?php foreach($packets as $key=>$item) : ?>
-                <div class="package-list" type="button" data-toggle="modal" data-target="#Modal<?=$key?>">
+                <div class="package-list" type="button" data-toggle="modal" data-target="#Modal123">
                     <div id="css-radius1" class="pack-top" >
                         <?php if($item['image']) : ?>
                         <div class="pack-img">
@@ -85,7 +85,7 @@ $packets = get_field('packets');
     </div>
 </section>
 	<!-- popup packageService -->
-    <div class="modal packet fade show" id="Modal0" tabindex="-1" aria-labelledby="0ModalLabel" aria-modal="true" role="dialog">
+    <div class="modal packet fade show" id="Modal123" tabindex="-1" aria-labelledby="0ModalLabel" aria-modal="true" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
@@ -94,7 +94,7 @@ $packets = get_field('packets');
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                             </button>
-                            <img decoding="async" src="http://saltech.local/wp-content/themes/weable/assets/images/logo 1.webp" alt="">
+                            <img decoding="async" src="/wp-content/themes/weable/assets/images/logo 1.webp" alt="">
                             <div class="mydiv-bor">
                                 <form action="">
                                     <div class="form-group text-left">
