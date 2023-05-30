@@ -767,6 +767,9 @@
 }
 
 @media (max-width: 541px) {
+  .w-packageService{
+    padding-bottom: 2rem;
+  }
   .w-packageService .package-text h4 {
     width: 100%;
   }

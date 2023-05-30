@@ -46,9 +46,9 @@ $form = get_field('form');
                 </div>
                 <?php if($title_top['image']) : ?>
                     <div class="imgMain">
-                        <img src="https://saltech.webmau.net/wp-content/uploads/2023/03/hoa-tiet-1-THH.webp" alt="" class="left">
-                        <img id="imgContent" src="<?= esc_url($title_top['image']['url']) ?>" alt="<?= esc_attr($title_top['image']['alt']) ?>">
-                        <img src="https://saltech.webmau.net/wp-content/uploads/2023/03/Hoa-tiet-2-THH.webp" alt="" class="right">
+                        <img src="https://saltech.webmau.net/wp-content/uploads/2023/03/hoa-tiet-1-THH.webp" alt="" class="left img-fluid">
+                        <img id="imgContent" src="<?= esc_url($title_top['image']['url']) ?>" class="img-fluid" alt="<?= esc_attr($title_top['image']['alt']) ?>">
+                        <img src="https://saltech.webmau.net/wp-content/uploads/2023/03/Hoa-tiet-2-THH.webp" alt="" class="right img-fluid">
                     </div>
                 <?php endif; ?>
             </div>
