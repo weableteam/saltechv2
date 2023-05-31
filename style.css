@@ -8143,7 +8143,7 @@ img{
 	margin-bottom: .5rem;
 	border-radius: 10px;
 }
-.navbar-expand-md .navbar-nav .dropdown-menu li.active a{
+.navbar-expand-md .navbar-nav .dropdown-menu li.active > a{
 	background-color: #26FFB1 !important;
 }
 .navbar-expand-md .navbar-nav .dropdown-menu a:hover{
