@@ -38,7 +38,7 @@ $bottom = get_field('bottom');
 
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-    <div class="w-boxService container">
+    <div class=" container">
         <div class="boxService-head">
             <?= ($subtitle) ? '<p>'.$subtitle.'</p>' : '' ?>
             <?= ($title) ? '<h3>'.$title.'</h3>' : '' ?>

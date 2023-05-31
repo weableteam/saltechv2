@@ -981,6 +981,12 @@
 
   /*End .w-process . */
 }
+
+@media (max-width:767px){
+  .w-intro .title .sub-title{
+    padding-top: 0;
+  }
+}
 /* lh */
 .w-lh {
 }
@@ -1081,6 +1087,10 @@
   text-decoration: none;
   color: #fff;
   font-weight: 500;
+}
+.w-ms .mission-left p{
+  font-size: 2.563rem;
+  line-height: 53px;
 }
 .w-ms .mission-right {
   width: 23%;
@@ -1449,7 +1459,7 @@
   .w-ms .people-mb {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 20px;
   }
   .w-apj .about-heading {
     padding: 0;
@@ -1508,6 +1518,8 @@
   .w-ms .mision-people {
     background-size: contain;
     background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
   }
   .w-ms .mision-people-img {
     width: 4rem;
@@ -1536,5 +1548,27 @@
   }
   .w-ca .campaign-item-wrapper {
     position: static;
+  }
+  .w-apj .about-name > span {
+		width: 3.379rem;
+		height: 3.379rem;
+	}
+	.w-apj .about-name {
+		bottom: 1rem;
+		width: max-content;
+		transform: translateX(1rem);
+	}
+	.w-apj .about-name-wrapper > h4 {
+		font-size: 1.2rem;
+	}
+  .w-apj .slick-next{
+		right: 25%;
+	}
+	.w-apj .slick-prev {
+		left: 25%;
+	}
+  .w-ms .mission-left p {
+    font-size: 1.563rem;
+    line-height: 32px;
   }
 }

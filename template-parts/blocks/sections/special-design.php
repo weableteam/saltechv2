@@ -176,6 +176,14 @@ if (!function_exists('specialDesignScripts'))   {
             arrows: true,
             prevArrow: '<button type="button" class="slick-prev slick-icon"><i class="bi bi-chevron-left"></i></button>',
             nextArrow: '<button type="button" class="slick-next slick-icon"><i class="bi bi-chevron-right"></i></button>',
+            responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ],        
         });
     }
 
@@ -186,31 +194,27 @@ if (!function_exists('specialDesignScripts'))   {
         };
     
         function sliderInit() {
-        var $slider = $('w-specialDesign.w-pSlider .slider-ct');
+        var $slider = $('w-specialDesign .list-projectDone .slider-ct');
         $slider.each(function() {
             var $sliderParent = $(this).parent();
             $(this).slick({
-                slidesToShow: 3,
+                slidesToShow: 2,
                 // autoplay: true,
                 speed: 300,
-                prevArrow: $('w-specialDesign.w-pSlider .slick-prev'),
-                    nextArrow: $('w-specialDesign.w-pSlider  .slick-next'),
+                prevArrow: $('w-specialDesign .list-projectDone .slick-prev'),
+                    nextArrow: $('w-specialDesign .list-projectDone  .slick-next'),
                 responsive: [
                     {
                         breakpoint: 992,
                         settings: {
                             arrows: true,
-                            centerMode: true,
-                            centerPadding: '0px',
                             slidesToShow: 3
                             }
                     },
                     {
-                        breakpoint: 541,
+                        breakpoint: 767,
                         settings: {
-                            arrows: true,
-                            centerMode: true,
-                            centerPadding: '40px',
+                            // centerPadding: '40px',
                             slidesToShow: 1
                         }
                     }

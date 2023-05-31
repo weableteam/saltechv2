@@ -96,7 +96,7 @@
 		</nav><!-- /#header -->
 		
 		<div class="m-menu d-lg-none d-block">
-			<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+			<!-- <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 				<?php
 					$header_logo = get_theme_mod( 'header_logo' ); // Get custom meta-value.
 
@@ -108,7 +108,7 @@
 						echo esc_attr( get_bloginfo( 'name', 'display' ) );
 					endif;
 				?>
-			</a>
+			</a> -->
 			<?php 
 				wp_nav_menu(
 					array(

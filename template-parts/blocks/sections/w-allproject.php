@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'w-allpj w-apj pt-5';
+$className = 'w-allpj w-apj py-5';
 
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
@@ -44,7 +44,7 @@ $brand = get_field('branch');
             </h1>
         </div>
     </div>
-        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+        <ul class="nav nav-tabs justify-content-md-center" id="myTab" role="tablist">
             <?php if($google['projects']) : ?>
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Google Ads</a>

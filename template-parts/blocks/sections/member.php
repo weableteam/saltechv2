@@ -34,7 +34,7 @@ $title = get_field('title');
 $members = get_field('members');
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-    <div class="w-member" style="padding-right:0">
+    <div class="" style="padding-right:0">
         <div class="member-head">
             <div class="container">
                 <?= ($tag) ? '<span>'.$tag.'</span>' : '' ?>
